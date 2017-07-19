@@ -1,4 +1,4 @@
-package clasem.security;
+package clasem.wrappers;
 
 import java.util.Collection;
 import java.util.Date;
@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
-public class JwtUser implements UserDetails {
+public class JwtUserWrapper implements UserDetails {
 
 	private static final long serialVersionUID = 1215456216545L;
 	
@@ -23,7 +23,7 @@ public class JwtUser implements UserDetails {
     private final boolean enabled;
     private final Date lastPasswordResetDate;
 
-    public JwtUser(
+    public JwtUserWrapper(
           Long id,
           String username,
           String firstname,

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/admin")
 @PreAuthorize("hasRole('ADMIN')")
-public class AdminRestController {
+public class AdminResource {
 
 
     @RequestMapping(method = RequestMethod.GET)

@@ -1,11 +1,10 @@
 package clasem.controllers;
 
 import clasem.security.JwtTokenUtil;
-import clasem.services.JwtAuthenticationResponse;
+import clasem.wrappers.JwtUserWrapper;
 import clasem.wrappers.TokenWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.ResponseEntity;
 import org.springframework.mobile.device.Device;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -47,5 +46,18 @@ public class AuthenticationController {
 
         // Return the token
         return new TokenWrapper(token,userDetails.getAuthorities());
+    }
+
+    public TokenWrapper refreshToken(String token) {
+
+        String username = jwtTokenUtil.getUsernameFromToken(token);
+        JwtUserWrapper user = (JwtUserWrapper) userDetailsService.loadUserByUsername(username);
+
+        if (jwtTokenUtil.canTokenBeRefreshed(token, user.getLastPasswordResetDate())) {
+            String refreshedToken = jwtTokenUtil.refreshToken(token);
+            return new TokenWrapper(refreshedToken,user.getAuthorities());
+        } else {
+            return new TokenWrapper(null,null);
+        }
     }
 }

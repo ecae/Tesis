@@ -2,6 +2,7 @@ package clasem.api;
 
 import javax.servlet.http.HttpServletRequest;
 
+import clasem.controllers.UserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,26 +11,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import clasem.security.JwtTokenUtil;
-import clasem.security.JwtUser;
+import clasem.wrappers.JwtUserWrapper;
 
 @RestController
-public class UserRestController {
+public class UserResource {
 
     @Value("${jwt.header}")
     private String tokenHeader;
 
     @Autowired
-    private JwtTokenUtil jwtTokenUtil;
-
-    @Autowired
-    private UserDetailsService userDetailsService;
+    private UserController userController;
 
     @RequestMapping(value = "user", method = RequestMethod.GET)
-    public JwtUser getAuthenticatedUser(HttpServletRequest request) {
+    public JwtUserWrapper getAuthenticatedUser(HttpServletRequest request) {
         String token = request.getHeader(tokenHeader);
-        String username = jwtTokenUtil.getUsernameFromToken(token);
-        JwtUser user = (JwtUser) userDetailsService.loadUserByUsername(username);
-        return user;
+        return userController.deatilsUserAthenticated(token);
     }
 
 }

@@ -3,6 +3,7 @@ package clasem.security;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import clasem.wrappers.JwtUserWrapper;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
@@ -14,8 +15,8 @@ public final class JwtUserFactory {
     private JwtUserFactory() {
     }
 
-    public static JwtUser create(User user) {
-        return new JwtUser(
+    public static JwtUserWrapper create(User user) {
+        return new JwtUserWrapper(
                 user.getId(),
                 user.getUsername(),
                 user.getFirstname(),
