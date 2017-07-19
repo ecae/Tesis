@@ -1,4 +1,4 @@
-package clasem.controllers;
+package clasem.api;
 
 import javax.servlet.http.HttpServletRequest;
 

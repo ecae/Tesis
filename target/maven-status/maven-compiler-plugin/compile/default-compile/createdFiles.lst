@@ -1,3 +1,7 @@
+clasem/api/AuthenticationResource.class
+clasem/controllers/UserController.class
+clasem/wrappers/TokenWrapper.class
+clasem/controllers/AuthenticationController.class
 clasem/api/AdminRestController.class
 clasem/security/JwtTokenUtil.class
 clasem/BackendApplication.class
@@ -6,10 +10,9 @@ clasem/services/JwtUserDetailsServiceImpl.class
 clasem/security/JwtAuthenticationRequest.class
 clasem/services/JwtAuthenticationResponse.class
 clasem/entities/User.class
-clasem/controllers/AuthenticationRestController.class
-clasem/controllers/UserRestController.class
 clasem/repositories/UserRepository.class
 clasem/security/JwtAuthenticationEntryPoint.class
+clasem/api/UserRestController.class
 clasem/config/WebSecurityConfig.class
 clasem/security/JwtUserFactory.class
 clasem/security/JwtAuthenticationTokenFilter.class
