@@ -1,0 +1,17 @@
+clasem/api/AdminRestController.class
+clasem/security/JwtTokenUtil.class
+clasem/BackendApplication.class
+clasem/security/JwtUser.class
+clasem/services/JwtUserDetailsServiceImpl.class
+clasem/security/JwtAuthenticationRequest.class
+clasem/services/JwtAuthenticationResponse.class
+clasem/entities/User.class
+clasem/controllers/AuthenticationRestController.class
+clasem/controllers/UserRestController.class
+clasem/repositories/UserRepository.class
+clasem/security/JwtAuthenticationEntryPoint.class
+clasem/config/WebSecurityConfig.class
+clasem/security/JwtUserFactory.class
+clasem/security/JwtAuthenticationTokenFilter.class
+clasem/entities/AuthorityName.class
+clasem/entities/Authority.class

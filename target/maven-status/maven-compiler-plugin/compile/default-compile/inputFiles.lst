@@ -1,0 +1,17 @@
+/home/xander/Tesis/Backend/src/main/java/clasem/security/JwtTokenUtil.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/JwtAuthenticationRequest.java
+/home/xander/Tesis/Backend/src/main/java/clasem/BackendApplication.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/model/Authority.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/service/JwtUserDetailsServiceImpl.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/repository/UserRepository.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/service/JwtAuthenticationResponse.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/model/AuthorityName.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/config/WebSecurityConfig.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/JwtAuthenticationEntryPoint.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/model/User.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/controller/UserRestController.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/JwtUser.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/JwtAuthenticationTokenFilter.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/JwtUserFactory.java
+/home/xander/Tesis/Backend/src/main/java/clasem/admin/AdminRestController.java
+/home/xander/Tesis/Backend/src/main/java/clasem/security/controller/AuthenticationRestController.java

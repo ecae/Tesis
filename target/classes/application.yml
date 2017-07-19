@@ -1,0 +1,30 @@
+spring:
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  datasource:
+    ## MYSQL
+    url: jdbc:mysql://localhost:3306/tesis?SSL=false
+    username: root
+    password: alexander
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+          hibernate:
+            dialect: org.hibernate.dialect.MySQL5Dialect
+
+jwt:
+  header: Authorization
+  secret: clasemtesisbackend
+  expiration: 604800
+  route:
+    authentication:
+      path: auth
+      refresh: refresh
+
+#logging:
+#  level:
+#    org.springframework:
+#      security: DEBUG
