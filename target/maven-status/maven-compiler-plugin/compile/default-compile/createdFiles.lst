@@ -10,6 +10,7 @@ clasem/converter/UserConverter.class
 clasem/security/JwtAuthenticationEntryPoint.class
 clasem/config/WebSecurityConfig.class
 clasem/security/JwtAuthenticationTokenFilter.class
+clasem/wrappers/EditUserWrapper.class
 clasem/entities/AuthorityName.class
 clasem/services/impl/UserServiceImpl.class
 clasem/controllers/UserController.class

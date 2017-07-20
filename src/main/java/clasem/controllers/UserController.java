@@ -5,6 +5,7 @@ import clasem.repositories.UserRepository;
 import clasem.security.JwtTokenUtil;
 import clasem.services.UserService;
 import clasem.services.impl.UserServiceImpl;
+import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.JwtUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +35,9 @@ public class UserController {
 
     public List<ListUsersWrapper> allUsers() {
         return userService.allUsers();
+    }
+
+    public EditUserWrapper findById(Long id) {
+        return userService.findById( id);
     }
 }
