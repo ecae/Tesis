@@ -1,16 +1,13 @@
 spring:
-  jackson:
-    serialization:
-      INDENT_OUTPUT: true
   datasource:
     ## MYSQL
-    url: jdbc:mysql://localhost:3306/tesis?SSL=false
+    url: jdbc:mysql://localhost:3306/tesis?useSSL=false
     username: root
     password: alexander
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     properties:
           hibernate:
             dialect: org.hibernate.dialect.MySQL5Dialect
