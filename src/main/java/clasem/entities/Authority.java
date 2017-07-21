@@ -23,18 +23,21 @@ public class Authority {
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "authority_seq")
     @SequenceGenerator(name = "authority_seq", sequenceName = "authority_seq", allocationSize = 1)
-    private Long id;
+    private int id;
 
     @Column(name = "NAME", length = 50)
     @NotNull
     @Enumerated(EnumType.STRING)
     private AuthorityName name;
 
-    public Long getId() {
+    public Authority() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

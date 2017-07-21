@@ -3,7 +3,7 @@ spring:
     ## MYSQL
     url: jdbc:mysql://localhost:3306/tesis?useSSL=false
     username: root
-    password: alexander
+    password: 
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:

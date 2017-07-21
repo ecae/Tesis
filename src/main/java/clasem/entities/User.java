@@ -70,6 +70,9 @@ public class User {
             inverseJoinColumns = {@JoinColumn(name = "AUTHORITY_ID", referencedColumnName = "ID")})
     private List<Authority> authorities;
 
+    public User() {
+    }
+
     public Long getId() {
         return id;
     }

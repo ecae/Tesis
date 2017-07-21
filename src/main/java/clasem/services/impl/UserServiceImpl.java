@@ -1,9 +1,12 @@
 package clasem.services.impl;
 
 import clasem.converter.UserConverter;
+import clasem.entities.Authority;
+import clasem.entities.AuthorityName;
 import clasem.entities.User;
 import clasem.repositories.UserRepository;
 import clasem.services.UserService;
+import clasem.wrappers.CreateUserWrappers;
 import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +44,11 @@ public class UserServiceImpl implements UserService {
 
         User user = userRepository.findById(id);
         return userConverter.user2EditUserWrapper(user);
+    }
+
+    @Override
+    public boolean addUser(CreateUserWrappers createUserWrappers) { ;
+        userRepository.save(userConverter.createUserWrapper2user(createUserWrappers));
+        return true;
     }
 }
