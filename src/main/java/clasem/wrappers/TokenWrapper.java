@@ -7,14 +7,14 @@ import java.util.Collection;
 public class TokenWrapper {
 
     String token;
-    Collection<? extends GrantedAuthority> authorities;
-
-    public TokenWrapper(String token, Collection<? extends GrantedAuthority> authorities) {
-        this.token = token;
-        this.authorities = authorities;
-    }
+    String rol;
 
     public TokenWrapper() {
+    }
+
+    public TokenWrapper(String token, String rol) {
+        this.token = token;
+        this.rol = rol;
     }
 
     public String getToken() {
@@ -25,19 +25,19 @@ public class TokenWrapper {
         this.token = token;
     }
 
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return authorities;
+    public String getRol() {
+        return rol;
     }
 
-    public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
-        this.authorities = authorities;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     @Override
     public String toString() {
         return "TokenWrapper{" +
                 "token='" + token + '\'' +
-                ", authorities=" + authorities +
+                ", rol='" + rol + '\'' +
                 '}';
     }
 }
