@@ -4,9 +4,11 @@ import clasem.config.SecurityUtility;
 import clasem.entities.Authority;
 import clasem.entities.AuthorityName;
 import clasem.entities.User;
-import clasem.wrappers.CreateUserWrappers;
+import clasem.wrappers.CreateUserWrapper;
 import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
@@ -15,6 +17,8 @@ import java.util.List;
 
 @Controller
 public class UserConverter {
+
+    private static final Log log = LogFactory.getLog(UserConverter.class);
 
     public ListUsersWrapper user2ConvertListUsersWrapper(User user) {
 
@@ -39,32 +43,36 @@ public class UserConverter {
         return editUserWrapper;
     }
 
-    public User createUserWrapper2user(CreateUserWrappers createUserWrappers) {
+    public User createUserWrapper2user(CreateUserWrapper createUserWrapper) {
+
+        log.info("el rol que biene es: "+ createUserWrapper.getRol());
 
         List<Authority> authorities= new ArrayList<Authority>();
         Authority authorityUser = new Authority();
+        Authority authorityAdmin = new Authority();
         authorityUser.setId(1);
         authorityUser.setName(AuthorityName.ROLE_USER);
-        Authority authorityAdmin = new Authority();
         authorityAdmin.setId(2);
         authorityAdmin.setName(AuthorityName.ROLE_ADMIN);
 
-        authorities.add(authorityUser);
+        if(createUserWrapper.getRol() == AuthorityName.ROLE_ADMIN) {
+            log.info("entra al if con este rol: '"+ createUserWrapper.getRol()+"'");
+            authorities.add(authorityUser);
+            authorities.add(authorityAdmin);
+        }else {
+            log.info("entra al else con este rol: '"+ createUserWrapper.getRol()+"'");
+            authorities.add(authorityUser);
+        }
 
         User user = new User();
-        user.setUsername(createUserWrappers.getUsername());
-        user.setFirstname(createUserWrappers.getFirstname());
-        user.setLastname(createUserWrappers.getLastname());
-        user.setPassword(SecurityUtility.passwordEncoder().encode( createUserWrappers.getPassword()));
-        user.setEmail(createUserWrappers.getEmail());
+        user.setUsername(createUserWrapper.getUsername());
+        user.setFirstname(createUserWrapper.getFirstname());
+        user.setLastname(createUserWrapper.getLastname());
+        user.setPassword(SecurityUtility.passwordEncoder().encode( createUserWrapper.getPassword()));
+        user.setEmail(createUserWrapper.getEmail());
         user.setEnabled(true);
         user.setLastPasswordResetDate(new Date());
-        if(createUserWrappers.getRol() != "admin") {
-            user.getAuthorities().addAll(authorities);
-            return user;
-        }
-        authorities.add(authorityAdmin);
-        user.getAuthorities().addAll(authorities);
+        user.setAuthorities(authorities);
         return user;
     }
 }

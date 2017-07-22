@@ -1,12 +1,10 @@
 package clasem.services.impl;
 
 import clasem.converter.UserConverter;
-import clasem.entities.Authority;
-import clasem.entities.AuthorityName;
 import clasem.entities.User;
 import clasem.repositories.UserRepository;
 import clasem.services.UserService;
-import clasem.wrappers.CreateUserWrappers;
+import clasem.wrappers.CreateUserWrapper;
 import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,8 +45,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean addUser(CreateUserWrappers createUserWrappers) { ;
-        userRepository.save(userConverter.createUserWrapper2user(createUserWrappers));
-        return true;
+    public void addUser(CreateUserWrapper createUserWrapper) { ;
+        userRepository.save(userConverter.createUserWrapper2user(createUserWrapper));
     }
 }

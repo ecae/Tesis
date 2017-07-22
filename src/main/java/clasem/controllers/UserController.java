@@ -1,24 +1,16 @@
 package clasem.controllers;
 
-import clasem.entities.Authority;
-import clasem.entities.AuthorityName;
-import clasem.entities.User;
 import clasem.repositories.UserRepository;
 import clasem.security.JwtTokenUtil;
 import clasem.services.UserService;
-import clasem.services.impl.UserServiceImpl;
-import clasem.wrappers.CreateUserWrappers;
+import clasem.wrappers.CreateUserWrapper;
 import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.JwtUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 @Controller
@@ -51,20 +43,14 @@ public class UserController {
         return userService.findById( id);
     }
 
-    public ResponseEntity createUser(CreateUserWrappers createUserWrappers) {
+    public boolean createUser(CreateUserWrapper createUserWrapper) {
 
-        if( userRepository.findByUsername(createUserWrappers.getUsername()) != null) {
-            return new ResponseEntity("Usuario ya existe", HttpStatus.BAD_REQUEST);
+        if( null == userRepository.findByUsername(createUserWrapper.getUsername())) {
+            userService.addUser(createUserWrapper);
+            return true;
+        } else {
+            return false;
         }
-        if(userRepository.findByEmail(createUserWrappers.getEmail()) != null) {
-            return new ResponseEntity("Email  ya existe", HttpStatus.BAD_REQUEST);
-        }
-
-        if(!userService.addUser(createUserWrappers)){
-            return new ResponseEntity("error al crea el usuario",HttpStatus.BAD_REQUEST);
-        }
-
-        return new ResponseEntity("usuario creado correctamente",HttpStatus.OK);
 
     }
 }

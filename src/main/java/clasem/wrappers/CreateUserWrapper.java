@@ -1,18 +1,20 @@
 package clasem.wrappers;
 
-public class CreateUserWrappers {
+import clasem.entities.AuthorityName;
+
+public class CreateUserWrapper {
 
     String username;
     String firstname;
     String lastname;
     String password;
     String email;
-    String rol;
+    AuthorityName rol;
 
-    public CreateUserWrappers() {
+    public CreateUserWrapper() {
     }
 
-    public CreateUserWrappers(String username, String firstname, String lastname, String password, String email, String rol) {
+    public CreateUserWrapper(String username, String firstname, String lastname, String password, String email, AuthorityName rol) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -61,23 +63,23 @@ public class CreateUserWrappers {
         this.email = email;
     }
 
-    public String getRol() {
+    public AuthorityName getRol() {
         return rol;
     }
 
-    public void setRol(String rol) {
+    public void setRol(AuthorityName rol) {
         this.rol = rol;
     }
 
     @Override
     public String toString() {
-        return "CreateUserWrappers{" +
+        return "CreateUserWrapper{" +
                 "username='" + username + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", rol='" + rol + '\'' +
+                ", rol=" + rol +
                 '}';
     }
 }
