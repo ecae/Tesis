@@ -1,3 +1,6 @@
 clasem/api/exceptions/ErrorLoginException.class
+clasem/api/exceptions/NotFoundRolException.class
+clasem/wrappers/ErrorWrapper.class
 clasem/services/impl/AuthorizationServiceImpl.class
 clasem/services/AuthorizationService.class
+clasem/services/impl/ErrorService.class

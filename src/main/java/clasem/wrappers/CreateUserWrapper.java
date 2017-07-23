@@ -1,20 +1,38 @@
 package clasem.wrappers;
 
 import clasem.entities.AuthorityName;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 public class CreateUserWrapper {
 
+    @Size(min = 5,max = 10)
     String username;
+
+    @Size(min = 3,max = 10)
     String firstname;
+
+    @Size(min = 3,max = 10)
     String lastname;
+
+    @Size(min = 5,max = 20)
     String password;
+
+    @Email(message = "Ingrese un email valido")
     String email;
-    AuthorityName rol;
+
+    @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="Rol no es valido")
+    String rol;
 
     public CreateUserWrapper() {
     }
 
-    public CreateUserWrapper(String username, String firstname, String lastname, String password, String email, AuthorityName rol) {
+    public CreateUserWrapper(String username, String firstname, String lastname, String password, String email, String rol) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -64,10 +82,11 @@ public class CreateUserWrapper {
     }
 
     public AuthorityName getRol() {
-        return rol;
+         AuthorityName authorityName = AuthorityName.valueOf(rol);
+         return authorityName;
     }
 
-    public void setRol(AuthorityName rol) {
+    public void setRol(String rol) {
         this.rol = rol;
     }
 
@@ -79,7 +98,7 @@ public class CreateUserWrapper {
                 ", lastname='" + lastname + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", rol=" + rol +
+                ", rol='" + rol + '\'' +
                 '}';
     }
 }

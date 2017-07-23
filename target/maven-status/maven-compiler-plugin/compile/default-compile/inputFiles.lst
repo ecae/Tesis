@@ -1,7 +1,9 @@
 /home/xander/Tesis/Backend/src/main/java/clasem/api/exceptions/InvalidFieldModifyUserException.java
 /home/xander/Tesis/Backend/src/main/java/clasem/entities/User.java
+/home/xander/Tesis/Backend/src/main/java/clasem/wrappers/ErrorWrapper.java
 /home/xander/Tesis/Backend/src/main/java/clasem/api/AdminResource.java
 /home/xander/Tesis/Backend/src/main/java/clasem/converter/UserConverter.java
+/home/xander/Tesis/Backend/src/main/java/clasem/services/AuthorizationService.java
 /home/xander/Tesis/Backend/src/main/java/clasem/api/exceptions/InvalidUserFieldException.java
 /home/xander/Tesis/Backend/src/main/java/clasem/security/JwtTokenUtil.java
 /home/xander/Tesis/Backend/src/main/java/clasem/config/WebSecurityConfig.java
@@ -18,11 +20,13 @@
 /home/xander/Tesis/Backend/src/main/java/clasem/controllers/UserController.java
 /home/xander/Tesis/Backend/src/main/java/clasem/security/JwtAuthenticationTokenFilter.java
 /home/xander/Tesis/Backend/src/main/java/clasem/api/UserResource.java
+/home/xander/Tesis/Backend/src/main/java/clasem/api/exceptions/NotFoundRolException.java
 /home/xander/Tesis/Backend/src/main/java/clasem/aspect/ApiLogs.java
 /home/xander/Tesis/Backend/src/main/java/clasem/repositories/UserRepository.java
 /home/xander/Tesis/Backend/src/main/java/clasem/api/exceptions/NotFoundUserIdException.java
 /home/xander/Tesis/Backend/src/main/java/clasem/BackendApplication.java
 /home/xander/Tesis/Backend/src/main/java/clasem/api/AuthenticationResource.java
+/home/xander/Tesis/Backend/src/main/java/clasem/api/exceptions/ErrorLoginException.java
 /home/xander/Tesis/Backend/src/main/java/clasem/entities/AuthorityName.java
 /home/xander/Tesis/Backend/src/main/java/clasem/api/exceptions/UnauthorizedException.java
 /home/xander/Tesis/Backend/src/main/java/clasem/services/UserService.java
@@ -30,9 +34,11 @@
 /home/xander/Tesis/Backend/src/main/java/clasem/wrappers/EditUserWrapper.java
 /home/xander/Tesis/Backend/src/main/java/clasem/config/AspectConfig.java
 /home/xander/Tesis/Backend/src/main/java/clasem/wrappers/TokenWrapper.java
+/home/xander/Tesis/Backend/src/main/java/clasem/services/impl/ErrorService.java
 /home/xander/Tesis/Backend/src/main/java/clasem/services/JwtUserDetailsServiceImpl.java
 /home/xander/Tesis/Backend/src/main/java/clasem/services/impl/UserServiceImpl.java
 /home/xander/Tesis/Backend/src/main/java/clasem/entities/Authority.java
 /home/xander/Tesis/Backend/src/main/java/clasem/wrappers/JwtUserWrapper.java
+/home/xander/Tesis/Backend/src/main/java/clasem/services/impl/AuthorizationServiceImpl.java
 /home/xander/Tesis/Backend/src/main/java/clasem/security/JwtUserFactory.java
 /home/xander/Tesis/Backend/src/main/java/clasem/wrappers/CreateUserWrapper.java

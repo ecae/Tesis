@@ -4,7 +4,7 @@ public class AlreadyExistUserFieldException extends ApiException {
 
     private static final long serialVersionUID = -1344640670884805385L;
 
-    public static final String DESCRIPTION = "username ya existente en la BD";
+    public static final String DESCRIPTION = "usuario ya existente en la BD";
 
     public static final int CODE = 1;
 

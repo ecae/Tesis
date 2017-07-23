@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ApiExceptionHandler {
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler({NotFoundUserIdException.class,ErrorLoginException.class})
+    @ExceptionHandler({NotFoundUserIdException.class,ErrorLoginException.class,NotFoundRolException.class})
     @ResponseBody
     public ErrorMessage notFoundRequest(ApiException exception) {
         ErrorMessage apiErrorMessage = new ErrorMessage(exception);
