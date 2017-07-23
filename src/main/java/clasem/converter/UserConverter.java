@@ -9,9 +9,11 @@ import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class UserConverter {
         ListUsersWrapper listUsersWrapper = new ListUsersWrapper();
         listUsersWrapper.setId(user.getId());
         listUsersWrapper.setUsername(user.getUsername());
-        listUsersWrapper.setAuthorities(user.getAuthorities());
+        listUsersWrapper.setRol(getRol(user.getAuthorities()));
         listUsersWrapper.setEnabled(user.getEnabled());
         return listUsersWrapper;
     }
@@ -38,7 +40,7 @@ public class UserConverter {
         editUserWrapper.setFirstname(user.getFirstname());
         editUserWrapper.setLastname(user.getLastname());
         editUserWrapper.setEmail(user.getEmail());
-        editUserWrapper.setAuthorities(user.getAuthorities());
+        editUserWrapper.setRol(getRol(user.getAuthorities()));
         editUserWrapper.setEnabled(user.getEnabled());
         return editUserWrapper;
     }
@@ -74,5 +76,13 @@ public class UserConverter {
         user.setLastPasswordResetDate(new Date());
         user.setAuthorities(authorities);
         return user;
+    }
+
+    public String getRol(List<Authority> authorities) {
+        if(authorities.size() < 2) {
+            return "ROLE_USER";
+        }else {
+            return "ROLE_ADMIN";
+        }
     }
 }

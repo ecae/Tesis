@@ -1,5 +1,6 @@
 package clasem.controllers;
 
+import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.repositories.UserRepository;
 import clasem.security.JwtTokenUtil;
 import clasem.services.UserService;
@@ -39,8 +40,12 @@ public class UserController {
         return userService.allUsers();
     }
 
-    public EditUserWrapper findById(Long id) {
-        return userService.findById( id);
+    public EditUserWrapper findById(Long id) throws NotFoundUserIdException {
+        EditUserWrapper editUserWrapper= userService.findById( id);
+        if (null == editUserWrapper) {
+           throw new NotFoundUserIdException();
+        }
+        return editUserWrapper;
     }
 
     public boolean createUser(CreateUserWrapper createUserWrapper) {

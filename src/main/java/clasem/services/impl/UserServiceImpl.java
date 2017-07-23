@@ -1,5 +1,6 @@
 package clasem.services.impl;
 
+import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.converter.UserConverter;
 import clasem.entities.User;
 import clasem.repositories.UserRepository;
@@ -38,14 +39,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public EditUserWrapper findById(Long id) {
+    public EditUserWrapper findById(Long id)  {
 
         User user = userRepository.findById(id);
+        if (null == user) {
+            return  null;
+        }
         return userConverter.user2EditUserWrapper(user);
     }
 
     @Override
-    public void addUser(CreateUserWrapper createUserWrapper) { ;
+    public void addUser(CreateUserWrapper createUserWrapper) {
         userRepository.save(userConverter.createUserWrapper2user(createUserWrapper));
     }
 }

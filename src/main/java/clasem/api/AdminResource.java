@@ -2,6 +2,7 @@ package clasem.api;
 
 import clasem.api.exceptions.AlreadyExistUserFieldException;
 import clasem.api.exceptions.InvalidUserFieldException;
+import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.controllers.UserController;
 import clasem.wrappers.CreateUserWrapper;
 import clasem.wrappers.EditUserWrapper;
@@ -27,7 +28,7 @@ public class AdminResource {
     }
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
-    public EditUserWrapper findUserById(@PathVariable Long id){
+    public EditUserWrapper findUserById(@PathVariable Long id) throws NotFoundUserIdException {
         return userController.findById(id);
     }
 

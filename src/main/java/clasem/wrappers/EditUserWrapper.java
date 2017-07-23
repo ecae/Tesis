@@ -1,9 +1,5 @@
 package clasem.wrappers;
 
-import clasem.entities.Authority;
-
-import java.util.List;
-
 public class EditUserWrapper {
 
     Long id;
@@ -11,19 +7,19 @@ public class EditUserWrapper {
     String firstname;
     String lastname;
     String email;
-    List<Authority> authorities;
+    String rol;
     Boolean enabled;
 
     public EditUserWrapper() {
     }
 
-    public EditUserWrapper(Long id, String username, String firstname, String lastname, String email, List<Authority> authorities, Boolean enabled) {
+    public EditUserWrapper(Long id, String username, String firstname, String lastname, String email, String rol, Boolean enabled) {
         this.id = id;
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
-        this.authorities = authorities;
+        this.rol = rol;
         this.enabled = enabled;
     }
 
@@ -67,12 +63,12 @@ public class EditUserWrapper {
         this.email = email;
     }
 
-    public List<Authority> getAuthorities() {
-        return authorities;
+    public String getRol() {
+        return rol;
     }
 
-    public void setAuthorities(List<Authority> authorities) {
-        this.authorities = authorities;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     public Boolean getEnabled() {
@@ -91,7 +87,7 @@ public class EditUserWrapper {
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
-                ", authorities=" + authorities +
+                ", rol='" + rol + '\'' +
                 ", enabled=" + enabled +
                 '}';
     }

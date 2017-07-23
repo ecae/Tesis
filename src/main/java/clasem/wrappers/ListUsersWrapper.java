@@ -1,25 +1,19 @@
 package clasem.wrappers;
 
-import clasem.entities.Authority;
-import org.springframework.security.core.GrantedAuthority;
-
-import java.util.Collection;
-import java.util.List;
-
 public class ListUsersWrapper {
 
     Long id;
     String username;
-    private List<Authority> authorities;
+    String rol;
     Boolean enabled;
 
     public ListUsersWrapper() {
     }
 
-    public ListUsersWrapper(Long id, String username, List<Authority> authorities, Boolean enabled) {
+    public ListUsersWrapper(Long id, String username, String rol, Boolean enabled) {
         this.id = id;
         this.username = username;
-        this.authorities = authorities;
+        this.rol = rol;
         this.enabled = enabled;
     }
 
@@ -39,12 +33,12 @@ public class ListUsersWrapper {
         this.username = username;
     }
 
-    public List<Authority> getAuthorities() {
-        return authorities;
+    public String getRol() {
+        return rol;
     }
 
-    public void setAuthorities(List<Authority> authorities) {
-        this.authorities = authorities;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     public Boolean getEnabled() {
@@ -60,7 +54,7 @@ public class ListUsersWrapper {
         return "ListUsersWrapper{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", authorities=" + authorities +
+                ", rol='" + rol + '\'' +
                 ", enabled=" + enabled +
                 '}';
     }
