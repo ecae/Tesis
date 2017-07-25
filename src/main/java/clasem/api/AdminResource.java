@@ -5,10 +5,7 @@ import clasem.api.exceptions.InvalidUserFieldException;
 import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.controllers.UserController;
 import clasem.services.impl.ErrorService;
-import clasem.wrappers.CreateUserWrapper;
-import clasem.wrappers.EditUserWrapper;
-import clasem.wrappers.ErrorWrapper;
-import clasem.wrappers.ListUsersWrapper;
+import clasem.wrappers.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +16,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,11 +26,19 @@ import java.util.List;
 @PreAuthorize("hasRole('ADMIN')")
 public class AdminResource {
 
-    @Autowired
+
     private UserController userController;
+    private ErrorService errorService;
 
     @Autowired
-    private ErrorService errorService;
+    public void setUserController(UserController userController) {
+        this.userController = userController;
+    }
+
+    @Autowired
+    public void setErrorService(ErrorService errorService) {
+        this.errorService = errorService;
+    }
 
     @RequestMapping(value = "/users",method = RequestMethod.GET)
     public List<ListUsersWrapper> allUsers() {
@@ -51,10 +57,18 @@ public class AdminResource {
             return errorService.getListError(errors);
         }
 
-        if (! userController.createUser(createUserWrapper)){
-            throw new AlreadyExistUserFieldException();
+        return userController.createUser(createUserWrapper);
+
+    }
+
+    @RequestMapping(value = "/user/{id}/edit",method = RequestMethod.POST)
+    public ResponseEntity userModify(@Min(value = 1, message = "el id tiene que ser mayor a 0") @PathVariable Long id , @Valid @RequestBody UserModifyWrapper userModifyWrapper , Errors errors) throws InvalidUserFieldException {
+
+        if (errors.hasErrors()) {
+            return errorService.getListError(errors);
         }
-        return new ResponseEntity("Usuario creado correctamente", HttpStatus.OK);
+
+        return userController.userModify(id,userModifyWrapper);
     }
 
 }

@@ -1,6 +1,5 @@
 package clasem.services.impl;
 
-import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.converter.UserConverter;
 import clasem.entities.User;
 import clasem.repositories.UserRepository;
@@ -8,7 +7,10 @@ import clasem.services.UserService;
 import clasem.wrappers.CreateUserWrapper;
 import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
+import clasem.wrappers.UserModifyWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -51,5 +53,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void addUser(CreateUserWrapper createUserWrapper) {
         userRepository.save(userConverter.createUserWrapper2user(createUserWrapper));
+    }
+
+    @Override
+    public ResponseEntity userModify(User user, UserModifyWrapper userModifyWrapper) {
+        userRepository.save(userConverter.userModifyWrapper2User(user,userModifyWrapper));
+        return new ResponseEntity("Usuario modificado correctamente", HttpStatus.OK);
     }
 }

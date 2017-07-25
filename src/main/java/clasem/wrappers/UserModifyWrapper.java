@@ -3,12 +3,13 @@ package clasem.wrappers;
 import clasem.entities.AuthorityName;
 import org.hibernate.validator.constraints.Email;
 
+import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class CreateUserWrapper {
+public class UserModifyWrapper {
 
-    @Size(min = 5,max = 20)
+    @Size(min = 5,max = 10)
     String username;
 
     @Size(min = 3,max = 20)
@@ -17,24 +18,28 @@ public class CreateUserWrapper {
     @Size(min = 3,max = 20)
     String lastname;
 
-    @Size(min = 5,max = 20)
+
     String password;
 
-    @Email(message = "Ingrese un email válido")
+    @Email(message = "Ingrese un email valido")
     String email;
 
-    @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="El rol establecido no es válido")
+    @AssertTrue(message = "ingrese un valor booleano")
+    boolean enabled;
+
+    @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="El rol establecido no es validp")
     String rol;
 
-    public CreateUserWrapper() {
+    public UserModifyWrapper() {
     }
 
-    public CreateUserWrapper(String username, String firstname, String lastname, String password, String email, String rol) {
+    public UserModifyWrapper(String username, String firstname, String lastname, String password, String email, boolean enabled, String rol) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
         this.password = password;
         this.email = email;
+        this.enabled = enabled;
         this.rol = rol;
     }
 
@@ -78,9 +83,17 @@ public class CreateUserWrapper {
         this.email = email;
     }
 
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
     public AuthorityName getRol() {
-         AuthorityName authorityName = AuthorityName.valueOf(rol);
-         return authorityName;
+        AuthorityName authorityName = AuthorityName.valueOf(rol);
+        return authorityName;
     }
 
     public void setRol(String rol) {
@@ -89,12 +102,13 @@ public class CreateUserWrapper {
 
     @Override
     public String toString() {
-        return "CreateUserWrapper{" +
+        return "UserModifyWrapper{" +
                 "username='" + username + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
+                ", enabled=" + enabled +
                 ", rol='" + rol + '\'' +
                 '}';
     }

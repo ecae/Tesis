@@ -1,5 +1,7 @@
 package clasem.entities;
 
+import clasem.config.SecurityUtility;
+
 import java.util.Date;
 import java.util.List;
 
@@ -94,7 +96,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = SecurityUtility.passwordEncoder().encode(password);
     }
 
     public String getFirstname() {
@@ -143,5 +145,35 @@ public class User {
 
     public void setLastPasswordResetDate(Date lastPasswordResetDate) {
         this.lastPasswordResetDate = lastPasswordResetDate;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", email='" + email + '\'' +
+                ", enabled=" + enabled +
+                ", lastPasswordResetDate=" + lastPasswordResetDate +
+                ", authorities=" + authorities +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        return id == ((User) obj).id;
     }
 }

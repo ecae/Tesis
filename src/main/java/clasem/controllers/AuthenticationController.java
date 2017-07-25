@@ -4,8 +4,6 @@ import clasem.security.JwtTokenUtil;
 import clasem.services.AuthorizationService;
 import clasem.wrappers.JwtUserWrapper;
 import clasem.wrappers.TokenWrapper;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mobile.device.Device;
@@ -20,22 +18,35 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class AuthenticationController {
 
-    private static final Log log = LogFactory.getLog(AuthenticationController.class);
+    private AuthenticationManager authenticationManager;
+
+    private UserDetailsService userDetailsService;
+
+    private AuthorizationService authorizationService;
+
+    private JwtTokenUtil jwtTokenUtil;
 
     @Value("${jwt.header}")
     private String tokenHeader;
 
     @Autowired
-    private AuthenticationManager authenticationManager;
+    public void setAuthenticationManager(AuthenticationManager authenticationManager) {
+        this.authenticationManager = authenticationManager;
+    }
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    public void setUserDetailsService(UserDetailsService userDetailsService) {
+        this.userDetailsService = userDetailsService;
+    }
+    @Autowired
+    public void setAuthorizationService(AuthorizationService authorizationService) {
+        this.authorizationService = authorizationService;
+    }
 
     @Autowired
-    private AuthorizationService authorizationService;
-
-    @Autowired
-    private JwtTokenUtil jwtTokenUtil;
+    public void setJwtTokenUtil(JwtTokenUtil jwtTokenUtil) {
+        this.jwtTokenUtil = jwtTokenUtil;
+    }
 
     public TokenWrapper login(String username, String password, Device device)  {
 

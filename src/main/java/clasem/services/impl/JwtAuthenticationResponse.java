@@ -1,4 +1,4 @@
-package clasem.services;
+package clasem.services.impl;
 
 import java.io.Serializable;
 

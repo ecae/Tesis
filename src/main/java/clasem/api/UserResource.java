@@ -16,11 +16,15 @@ import clasem.wrappers.JwtUserWrapper;
 @RestController
 public class UserResource {
 
+    private UserController userController;
+
     @Value("${jwt.header}")
     private String tokenHeader;
 
     @Autowired
-    private UserController userController;
+    public void setUserController(UserController userController) {
+        this.userController = userController;
+    }
 
     @RequestMapping(value = "user", method = RequestMethod.GET)
     public JwtUserWrapper getAuthenticatedUser(HttpServletRequest request) {

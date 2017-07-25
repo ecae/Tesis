@@ -17,11 +17,15 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 public class AuthenticationResource {
 
+    private AuthenticationController authenticationController;
+
     @Value("${jwt.header}")
     private String tokenHeader;
 
     @Autowired
-    private AuthenticationController authenticationController;
+    public void setAuthenticationController(AuthenticationController authenticationController) {
+        this.authenticationController = authenticationController;
+    }
 
     @RequestMapping(value = "${jwt.route.authentication.path}", method = RequestMethod.POST)
     public TokenWrapper createAuthenticationToken(@RequestBody JwtAuthenticationRequest authenticationRequest, Device device) throws AuthenticationException {
