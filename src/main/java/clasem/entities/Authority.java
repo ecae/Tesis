@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "authority")
-public class Authority {
+public class Authority extends DeletableModel{
 
     @Id
     @Column(name = "ID")

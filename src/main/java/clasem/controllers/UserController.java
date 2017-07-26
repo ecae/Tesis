@@ -1,7 +1,7 @@
 package clasem.controllers;
 
 import clasem.api.exceptions.AlreadyExistUserFieldException;
-import clasem.api.exceptions.InvalidUserFieldException;
+import clasem.api.exceptions.InvalidFieldModifyUserException;
 import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.entities.User;
 import clasem.repositories.UserRepository;
@@ -78,12 +78,12 @@ public class UserController {
 
     }
 
-    public ResponseEntity userModify(long id ,UserModifyWrapper userModifyWrapper) throws InvalidUserFieldException {
+    public ResponseEntity userModify(long id ,UserModifyWrapper userModifyWrapper) throws InvalidFieldModifyUserException {
 
         User user = userRepository.findOne(id);
 
         if ((userRepository.findByUsername(userModifyWrapper.getUsername()) != null) && (user.getId() != userRepository.findByUsername(userModifyWrapper.getUsername()).getId())) {
-            throw new InvalidUserFieldException("\nUsuario ya existe");
+            throw new InvalidFieldModifyUserException("\nUsuario ya existe");
         }else {
             return userService.userModify(user,userModifyWrapper);
         }

@@ -58,12 +58,25 @@ public class UserConverter {
     }
 
     public User userModifyWrapper2User(User user ,UserModifyWrapper userModifyWrapper) {
-        user.setUsername(userModifyWrapper.getUsername());
-        user.setFirstname(userModifyWrapper.getFirstname());
-        user.setLastname(userModifyWrapper.getLastname());
-        user.setEmail(userModifyWrapper.getEmail());
-        user.setEnabled(userModifyWrapper.isEnabled());
-        user.setAuthorities(setAuthorities(userModifyWrapper.getRol()));
+
+        if(userModifyWrapper.getUsername() != null){
+            user.setUsername(userModifyWrapper.getUsername());
+        }
+        if(userModifyWrapper.getFirstname() != null){
+            user.setFirstname(userModifyWrapper.getFirstname());
+        }
+        if(userModifyWrapper.getLastname() != null){
+            user.setLastname(userModifyWrapper.getLastname());
+        }
+        if(userModifyWrapper.getEmail() != null){
+            user.setEmail(userModifyWrapper.getEmail());
+        }
+        if(userModifyWrapper.isEnabled()){
+            user.setEnabled(userModifyWrapper.isEnabled());
+        }
+        if(userModifyWrapper.getRol() != null){
+            user.setAuthorities(setAuthorities(userModifyWrapper.AuthorityRol()));
+        }
         if(userModifyWrapper.getPassword() != null){
             user.setPassword(userModifyWrapper.getPassword());
             user.setLastPasswordResetDate(new Date());
@@ -98,4 +111,6 @@ public class UserConverter {
             return authorities;
         }
     }
+
+
 }

@@ -23,7 +23,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class User extends DeletableModel{
 
     @Id
     @Column(name = "ID")

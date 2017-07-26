@@ -1,23 +1,22 @@
 package clasem.api;
 
 import clasem.api.exceptions.AlreadyExistUserFieldException;
-import clasem.api.exceptions.InvalidUserFieldException;
+import clasem.api.exceptions.InvalidFieldModifyUserException;
 import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.controllers.UserController;
 import clasem.services.impl.ErrorService;
-import clasem.wrappers.*;
+import clasem.wrappers.CreateUserWrapper;
+import clasem.wrappers.EditUserWrapper;
+import clasem.wrappers.ListUsersWrapper;
+import clasem.wrappers.UserModifyWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.Errors;
-import org.springframework.validation.FieldError;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -61,8 +60,8 @@ public class AdminResource {
 
     }
 
-    @RequestMapping(value = "/user/{id}/edit",method = RequestMethod.POST)
-    public ResponseEntity userModify(@Min(value = 1, message = "el id tiene que ser mayor a 0") @PathVariable Long id , @Valid @RequestBody UserModifyWrapper userModifyWrapper , Errors errors) throws InvalidUserFieldException {
+    @RequestMapping(value = "/user/{id}/edit",method = RequestMethod.PUT)
+    public ResponseEntity userModify(@Min(value = 1, message = "el id tiene que ser mayor a 0") @PathVariable Long id , @Valid @RequestBody UserModifyWrapper userModifyWrapper , Errors errors) throws InvalidFieldModifyUserException {
 
         if (errors.hasErrors()) {
             return errorService.getListError(errors);

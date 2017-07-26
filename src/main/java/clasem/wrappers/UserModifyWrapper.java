@@ -4,6 +4,7 @@ import clasem.entities.AuthorityName;
 import org.hibernate.validator.constraints.Email;
 
 import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -18,13 +19,12 @@ public class UserModifyWrapper {
     @Size(min = 3,max = 20)
     String lastname;
 
-
+    @Size(min = 5,max = 20)
     String password;
 
     @Email(message = "Ingrese un email valido")
     String email;
 
-    @AssertTrue(message = "ingrese un valor booleano")
     boolean enabled;
 
     @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="El rol establecido no es validp")
@@ -91,13 +91,24 @@ public class UserModifyWrapper {
         this.enabled = enabled;
     }
 
-    public AuthorityName getRol() {
-        AuthorityName authorityName = AuthorityName.valueOf(rol);
-        return authorityName;
+    public String getRol() {
+        return rol;
+    }
+
+    public AuthorityName AuthorityRol() {
+        if(this.rol != null) {
+            AuthorityName authorityName = AuthorityName.valueOf(rol);
+            return authorityName;
+        }
+        return null;
     }
 
     public void setRol(String rol) {
         this.rol = rol;
+    }
+
+    public String rolString() {
+        return rol;
     }
 
     @Override
