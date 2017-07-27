@@ -70,5 +70,10 @@ public class AdminResource {
         return userController.userModify(id,userModifyWrapper);
     }
 
+    @RequestMapping(value ="/user/{id}",method = RequestMethod.DELETE)
+    public ResponseEntity userDestroy(@Min(value = 1, message = "el id tiene que ser mayor a 0") @PathVariable Long id )  throws NotFoundUserIdException{
+        return userController.userDelete(id);
+    }
+
 }
 

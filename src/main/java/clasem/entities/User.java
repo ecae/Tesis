@@ -1,6 +1,9 @@
 package clasem.entities;
 
 import clasem.config.SecurityUtility;
+import org.hibernate.annotations.ResultCheckStyle;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import java.util.Date;
 import java.util.List;
@@ -22,6 +25,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
+@SQLDelete(sql = "UPDATE user SET enabled = false, deleted_at = SYSDATE()  WHERE id = ?", check = ResultCheckStyle.COUNT)
+@Where(clause = "deleted_at IS null")
 @Table(name = "user")
 public class User extends DeletableModel{
 

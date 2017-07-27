@@ -89,4 +89,14 @@ public class UserController {
         }
 
     }
+
+    public ResponseEntity userDelete(long id) throws NotFoundUserIdException{
+
+        User user = userRepository.findOne(id);
+        if (null == user) {
+            throw new NotFoundUserIdException();
+        }
+        userRepository.delete(id);
+        return new ResponseEntity("Usuario eliminado correctamente", HttpStatus.OK);
+    }
 }
