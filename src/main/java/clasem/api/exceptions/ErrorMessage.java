@@ -8,6 +8,9 @@ public class ErrorMessage {
 
     private String url;
 
+    public ErrorMessage() {
+    }
+
     public ErrorMessage(ApiException exception) {
         this(exception.getClass().getSimpleName(), exception.getMessage(), exception.getUrl());
     }
@@ -16,9 +19,23 @@ public class ErrorMessage {
         this(exception.getClass().getSimpleName(), exception.getMessage(), "");
     }
 
+
+
     public ErrorMessage(String error, String description, String url) {
         this.error = error;
         this.description = description;
+        this.url = url;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setUrl(String url) {
         this.url = url;
     }
 

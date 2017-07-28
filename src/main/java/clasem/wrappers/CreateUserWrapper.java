@@ -1,5 +1,6 @@
 package clasem.wrappers;
 
+import clasem.components.constraint.RolConstraint;
 import clasem.entities.AuthorityName;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -29,8 +30,7 @@ public class CreateUserWrapper {
     @Email(message = "Ingrese un email válido")
     String email;
 
-    @NotEmpty
-    @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="El rol establecido no es válido")
+    @RolConstraint
     String rol;
 
     public CreateUserWrapper() {
