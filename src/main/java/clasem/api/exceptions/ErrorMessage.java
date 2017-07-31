@@ -6,25 +6,22 @@ public class ErrorMessage {
 
     private String description;
 
-    private String url;
-
     public ErrorMessage() {
     }
 
     public ErrorMessage(ApiException exception) {
-        this(exception.getClass().getSimpleName(), exception.getMessage(), exception.getUrl());
+        this(exception.getClass().getSimpleName(), exception.getMessage());
     }
 
     public ErrorMessage(Exception exception) {
-        this(exception.getClass().getSimpleName(), exception.getMessage(), "");
+        this(exception.getClass().getSimpleName(), exception.getMessage());
     }
 
 
 
-    public ErrorMessage(String error, String description, String url) {
+    public ErrorMessage(String error, String description) {
         this.error = error;
         this.description = description;
-        this.url = url;
     }
 
     public void setError(String error) {
@@ -35,10 +32,6 @@ public class ErrorMessage {
         this.description = description;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public String getError() {
         return error;
     }
@@ -47,13 +40,9 @@ public class ErrorMessage {
         return description;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
     @Override
     public String toString() {
-        return "ApiErrorMessage [error=" + error + ", description=" + description + ", url=" + url + "]";
+        return "ApiErrorMessage [error=" + error + ", description=" + description + "]";
     }
 
 }

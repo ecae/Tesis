@@ -1,7 +1,8 @@
 package clasem.services.impl;
 
+import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.converter.UserConverter;
-import clasem.entities.User;
+import clasem.entities.user.User;
 import clasem.repositories.UserRepository;
 import clasem.services.UserService;
 import clasem.wrappers.CreateUserWrapper;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,5 +61,52 @@ public class UserServiceImpl implements UserService {
     public ResponseEntity userModify(User user, UserModifyWrapper userModifyWrapper) {
         userRepository.save(userConverter.userModifyWrapper2User(user,userModifyWrapper));
         return new ResponseEntity("Usuario modificado correctamente", HttpStatus.OK);
+    }
+
+    @Override
+    public boolean fieldValueExists(Object value, String fieldName) throws UnsupportedOperationException {
+        Assert.notNull(fieldName);
+
+        if (!fieldName.equals("username") && !fieldName.equals("email") && !fieldName.equals("dni") && !fieldName.equals("cellphone")) {
+            throw new UnsupportedOperationException("Field name not supported");
+        }
+
+        if (value == null) {
+            return false;
+        }
+
+        User user = switchUnique(fieldName,value);
+
+        if(null != user) {
+            return false;
+        }
+        return true;
+    }
+
+    public User switchUnique(String f, Object value) {
+        User user = null;
+
+        switch (f) {
+            case "" : return null;
+            case "username" :user= userRepository.findByUsername(value.toString()); break;
+            case "email" :user= userRepository.findByEmail(value.toString()); break;
+            case "dni" :user= userRepository.findByDni(value.toString()); break;
+            case "cellphone" :user= userRepository.findByCellphone(value.toString()); break;
+        }
+        return user;
+    }
+
+    @Override
+    public boolean fieldIdExists(String id) throws UnsupportedOperationException {
+
+        if (id == null) {
+            return false;
+        }
+        Long nid = Long.parseLong(id.toString());
+        User user =userRepository.findOne(nid);
+        if(null != user) {
+            return false;
+        }
+        return true;
     }
 }

@@ -7,8 +7,8 @@ import clasem.wrappers.JwtUserWrapper;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
-import clasem.entities.Authority;
-import clasem.entities.User;;
+import clasem.entities.user.Authority;
+import clasem.entities.user.User;;
 
 public final class JwtUserFactory {
 
@@ -23,6 +23,8 @@ public final class JwtUserFactory {
                 user.getLastname(),
                 user.getEmail(),
                 user.getPassword(),
+                user.getDni(),
+                user.getCellphone(),
                 mapToGrantedAuthorities(user.getAuthorities()),
                 user.getEnabled(),
                 user.getLastPasswordResetDate()

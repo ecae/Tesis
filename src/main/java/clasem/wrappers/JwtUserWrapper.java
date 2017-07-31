@@ -19,6 +19,8 @@ public class JwtUserWrapper implements UserDetails {
     private final String lastname;
     private final String password;
     private final String email;
+    private final String dni;
+    private final String cellphone;
     private final Collection<? extends GrantedAuthority> authorities;
     private final boolean enabled;
     private final Date lastPasswordResetDate;
@@ -29,7 +31,10 @@ public class JwtUserWrapper implements UserDetails {
           String firstname,
           String lastname,
           String email,
-          String password, Collection<? extends GrantedAuthority> authorities,
+          String password,
+          String dni,
+          String cellphone,
+          Collection<? extends GrantedAuthority> authorities,
           boolean enabled,
           Date lastPasswordResetDate
     ) {
@@ -39,6 +44,8 @@ public class JwtUserWrapper implements UserDetails {
         this.lastname = lastname;
         this.email = email;
         this.password = password;
+        this.dni = dni;
+        this.cellphone = cellphone;
         this.authorities = authorities;
         this.enabled = enabled;
         this.lastPasswordResetDate = lastPasswordResetDate;
@@ -82,6 +89,14 @@ public class JwtUserWrapper implements UserDetails {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public String getCellphone() {
+        return cellphone;
     }
 
     @JsonIgnore

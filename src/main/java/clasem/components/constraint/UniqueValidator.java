@@ -7,17 +7,19 @@ import org.springframework.context.ApplicationContext;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class IdValidator implements ConstraintValidator<IdConstraint, String> {
+public class UniqueValidator implements ConstraintValidator<UniqueConstraint, Object> {
 
     @Autowired
     private ApplicationContext applicationContext;
 
     private FieldValueExists service;
+    private String fieldName;
 
     @Override
-    public void initialize(IdConstraint idConstraint) {
-        Class<? extends FieldValueExists> clazz = idConstraint.service();
-        String serviceQualifier = idConstraint.serviceQualifier();
+    public void initialize(UniqueConstraint unique) {
+        Class<? extends FieldValueExists> clazz = unique.service();
+        this.fieldName = unique.fieldName();
+        String serviceQualifier = unique.serviceQualifier();
 
         if (!serviceQualifier.equals("")) {
             this.service = this.applicationContext.getBean(serviceQualifier, clazz);
@@ -26,9 +28,9 @@ public class IdValidator implements ConstraintValidator<IdConstraint, String> {
         }
     }
 
-    @Override
-    public boolean isValid(String id, ConstraintValidatorContext context) {
-        return ( id != null && id.matches("^[1-9]\\d*$") && !this.service.fieldIdExists(id));
-    }
 
+    @Override
+    public boolean isValid(Object o, ConstraintValidatorContext context) {
+        return !this.service.fieldValueExists(o, this.fieldName);
+    }
 }

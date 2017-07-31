@@ -1,10 +1,13 @@
 package clasem.wrappers;
 
-import clasem.entities.AuthorityName;
+import clasem.components.constraint.CellPhoneConstraint;
+import clasem.components.constraint.DniConstraint;
+import clasem.components.constraint.IdConstraint;
+import clasem.components.constraint.UniqueConstraint;
+import clasem.entities.user.AuthorityName;
+import clasem.services.UserService;
 import org.hibernate.validator.constraints.Email;
 
-import javax.validation.constraints.AssertTrue;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -25,20 +28,28 @@ public class UserModifyWrapper {
     @Email(message = "Ingrese un email valido")
     String email;
 
+    @DniConstraint
+    String dni;
+
+    @CellPhoneConstraint
+    String cellphone;
+
     boolean enabled;
 
-    @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="El rol establecido no es validp")
+    @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="El rol establecido no es valido")
     String rol;
 
     public UserModifyWrapper() {
     }
 
-    public UserModifyWrapper(String username, String firstname, String lastname, String password, String email, boolean enabled, String rol) {
+    public UserModifyWrapper(String username, String firstname, String lastname, String password, String email, String dni, String cellphone, boolean enabled, String rol) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
         this.password = password;
         this.email = email;
+        this.dni = dni;
+        this.cellphone = cellphone;
         this.enabled = enabled;
         this.rol = rol;
     }
@@ -83,6 +94,22 @@ public class UserModifyWrapper {
         this.email = email;
     }
 
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
     public boolean isEnabled() {
         return enabled;
     }
@@ -119,6 +146,8 @@ public class UserModifyWrapper {
                 ", lastname='" + lastname + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
+                ", dni='" + dni + '\'' +
+                ", cellphone='" + cellphone + '\'' +
                 ", enabled=" + enabled +
                 ", rol='" + rol + '\'' +
                 '}';

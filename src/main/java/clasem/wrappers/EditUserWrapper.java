@@ -7,18 +7,22 @@ public class EditUserWrapper {
     String firstname;
     String lastname;
     String email;
+    String dni;
+    String cellphone;
     String rol;
     Boolean enabled;
 
     public EditUserWrapper() {
     }
 
-    public EditUserWrapper(Long id, String username, String firstname, String lastname, String email, String rol, Boolean enabled) {
+    public EditUserWrapper(Long id, String username, String firstname, String lastname, String email, String dni, String cellphone, String rol, Boolean enabled) {
         this.id = id;
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
         this.email = email;
+        this.dni = dni;
+        this.cellphone = cellphone;
         this.rol = rol;
         this.enabled = enabled;
     }
@@ -63,6 +67,22 @@ public class EditUserWrapper {
         this.email = email;
     }
 
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
     public String getRol() {
         return rol;
     }
@@ -87,6 +107,8 @@ public class EditUserWrapper {
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
+                ", dni='" + dni + '\'' +
+                ", cellphone='" + cellphone + '\'' +
                 ", rol='" + rol + '\'' +
                 ", enabled=" + enabled +
                 '}';

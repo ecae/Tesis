@@ -1,8 +1,8 @@
 package clasem.converter;
 
-import clasem.entities.Authority;
-import clasem.entities.AuthorityName;
-import clasem.entities.User;
+import clasem.entities.user.Authority;
+import clasem.entities.user.AuthorityName;
+import clasem.entities.user.User;
 import clasem.wrappers.CreateUserWrapper;
 import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
@@ -38,6 +38,8 @@ public class UserConverter {
         editUserWrapper.setFirstname(user.getFirstname());
         editUserWrapper.setLastname(user.getLastname());
         editUserWrapper.setEmail(user.getEmail());
+        editUserWrapper.setDni(user.getDni());
+        editUserWrapper.setCellphone(user.getCellphone());
         editUserWrapper.setRol(getRol(user.getAuthorities()));
         editUserWrapper.setEnabled(user.getEnabled());
         return editUserWrapper;
@@ -51,6 +53,8 @@ public class UserConverter {
         user.setLastname(createUserWrapper.getLastname());
         user.setPassword(createUserWrapper.getPassword());
         user.setEmail(createUserWrapper.getEmail());
+        user.setDni(createUserWrapper.getDni());
+        user.setCellphone(createUserWrapper.getCellphone());
         user.setEnabled(true);
         user.setLastPasswordResetDate(new Date());
         user.setAuthorities(setAuthorities(createUserWrapper.getRol()));

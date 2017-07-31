@@ -38,6 +38,7 @@ public class ApiExceptionHandler {
     @ExceptionHandler({InvalidUserFieldException.class})
     @ResponseBody
     public ErrorMessage badRequest(ApiException exception) {
+
         ErrorMessage apiErrorMessage = new ErrorMessage(exception);
         return apiErrorMessage;
     }

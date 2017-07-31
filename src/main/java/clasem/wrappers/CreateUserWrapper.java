@@ -1,11 +1,12 @@
 package clasem.wrappers;
 
+import clasem.components.constraint.CellPhoneConstraint;
+import clasem.components.constraint.DniConstraint;
 import clasem.components.constraint.RolConstraint;
-import clasem.entities.AuthorityName;
+import clasem.entities.user.AuthorityName;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class CreateUserWrapper {
@@ -23,12 +24,20 @@ public class CreateUserWrapper {
     String lastname;
 
     @NotEmpty
-    @Size(min = 5,max = 20)
-    String password;
-
-    @NotEmpty
     @Email(message = "Ingrese un email válido")
     String email;
+
+    @NotEmpty
+    @DniConstraint
+    String dni;
+
+    @NotEmpty
+    @CellPhoneConstraint
+    String cellphone;
+
+    @NotEmpty
+    @Size(min = 5,max = 20)
+    String password;
 
     @RolConstraint
     String rol;
@@ -36,12 +45,14 @@ public class CreateUserWrapper {
     public CreateUserWrapper() {
     }
 
-    public CreateUserWrapper(String username, String firstname, String lastname, String password, String email, String rol) {
+    public CreateUserWrapper(String username, String firstname, String lastname, String email, String dni, String cellphone, String password, String rol) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
-        this.password = password;
         this.email = email;
+        this.dni = dni;
+        this.cellphone = cellphone;
+        this.password = password;
         this.rol = rol;
     }
 
@@ -77,6 +88,22 @@ public class CreateUserWrapper {
         this.password = password;
     }
 
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -100,8 +127,10 @@ public class CreateUserWrapper {
                 "username='" + username + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
+                ", dni='" + dni + '\'' +
+                ", cellphone='" + cellphone + '\'' +
+                ", password='" + password + '\'' +
                 ", rol='" + rol + '\'' +
                 '}';
     }

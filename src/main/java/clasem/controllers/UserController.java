@@ -3,7 +3,7 @@ package clasem.controllers;
 import clasem.api.exceptions.AlreadyExistUserFieldException;
 import clasem.api.exceptions.InvalidFieldModifyUserException;
 import clasem.api.exceptions.NotFoundUserIdException;
-import clasem.entities.User;
+import clasem.entities.user.User;
 import clasem.repositories.UserRepository;
 import clasem.security.JwtTokenUtil;
 import clasem.services.UserService;
@@ -59,23 +59,16 @@ public class UserController {
         return userService.allUsers();
     }
 
-    public EditUserWrapper findById(Long id) throws NotFoundUserIdException {
+    public EditUserWrapper findById(Long id) {
+
         EditUserWrapper editUserWrapper= userService.findById( id);
-        if (null == editUserWrapper) {
-           throw new NotFoundUserIdException();
-        }
         return editUserWrapper;
     }
 
-    public ResponseEntity createUser(CreateUserWrapper createUserWrapper) throws AlreadyExistUserFieldException {
+    public ResponseEntity createUser(CreateUserWrapper createUserWrapper) {
 
-        if( null == userRepository.findByUsername(createUserWrapper.getUsername())) {
             userService.addUser(createUserWrapper);
             return new ResponseEntity("Usuario creado correctamente", HttpStatus.OK);
-        } else {
-            throw new AlreadyExistUserFieldException();
-        }
-
     }
 
     public ResponseEntity userModify(long id ,UserModifyWrapper userModifyWrapper) throws InvalidFieldModifyUserException {
@@ -83,19 +76,21 @@ public class UserController {
         User user = userRepository.findOne(id);
 
         if ((userRepository.findByUsername(userModifyWrapper.getUsername()) != null) && (user.getId() != userRepository.findByUsername(userModifyWrapper.getUsername()).getId())) {
-            throw new InvalidFieldModifyUserException("\nUsuario ya existe");
-        }else {
+            throw new InvalidFieldModifyUserException("Usuario ya esta en uso");
+        }else if((userRepository.findByDni(userModifyWrapper.getDni()) != null) && (user.getId() != userRepository.findByDni(userModifyWrapper.getDni()).getId())){
+            throw new InvalidFieldModifyUserException("Dni ya esta en uso");
+        }else if ((userRepository.findByEmail(userModifyWrapper.getEmail()) != null) && (user.getId() != userRepository.findByEmail(userModifyWrapper.getEmail()).getId())){
+            throw new InvalidFieldModifyUserException("Email ya esta en uso");
+        }else if ((userRepository.findByCellphone(userModifyWrapper.getCellphone()) != null) && (user.getId() != userRepository.findByCellphone(userModifyWrapper.getCellphone()).getId())){
+            throw new InvalidFieldModifyUserException("Celular ya esta en uso");
+        }else{
             return userService.userModify(user,userModifyWrapper);
         }
 
     }
 
-    public ResponseEntity userDelete(long id) throws NotFoundUserIdException{
+    public ResponseEntity userDelete(long id) {
 
-        User user = userRepository.findOne(id);
-        if (null == user) {
-            throw new NotFoundUserIdException();
-        }
         userRepository.delete(id);
         return new ResponseEntity("Usuario eliminado correctamente", HttpStatus.OK);
     }

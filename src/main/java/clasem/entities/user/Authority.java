@@ -1,23 +1,21 @@
-package clasem.entities;
+package clasem.entities.user;
 
-import java.util.List;
+import clasem.entities.DeletableModel;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "authority")
-public class Authority extends DeletableModel{
+public class Authority extends DeletableModel {
 
     @Id
     @Column(name = "ID")

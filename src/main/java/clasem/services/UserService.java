@@ -1,6 +1,6 @@
 package clasem.services;
 
-import clasem.entities.User;
+import clasem.entities.user.User;
 import clasem.wrappers.CreateUserWrapper;
 import clasem.wrappers.EditUserWrapper;
 import clasem.wrappers.ListUsersWrapper;
@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-public interface UserService {
+public interface UserService extends FieldValueExists{
 
     public abstract List<ListUsersWrapper> allUsers();
     public abstract EditUserWrapper findById(Long id);

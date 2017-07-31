@@ -1,9 +1,11 @@
-package clasem.entities;
+package clasem.entities.user;
 
 import clasem.config.SecurityUtility;
+import clasem.entities.DeletableModel;
 import org.hibernate.annotations.ResultCheckStyle;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+import org.hibernate.validator.constraints.Length;
 
 import java.util.Date;
 import java.util.List;
@@ -28,7 +30,7 @@ import javax.validation.constraints.Size;
 @SQLDelete(sql = "UPDATE user SET enabled = false, deleted_at = SYSDATE()  WHERE id = ?", check = ResultCheckStyle.COUNT)
 @Where(clause = "deleted_at IS null")
 @Table(name = "user")
-public class User extends DeletableModel{
+public class User extends DeletableModel {
 
     @Id
     @Column(name = "ID")
@@ -56,10 +58,20 @@ public class User extends DeletableModel{
     @Size(min = 4, max = 50)
     private String lastname;
 
-    @Column(name = "EMAIL", length = 50)
+    @Column(name = "EMAIL", length = 50, unique = true)
     @NotNull
     @Size(min = 4, max = 50)
     private String email;
+
+    @Column(name = "CELLPHONE", length = 50, unique = true)
+    @NotNull
+    @Size(min = 9, max = 9)
+    private String cellphone;
+
+    @Column(name = "DNI", length = 50, unique = true)
+    @NotNull
+    @Size(min = 8, max = 8)
+    private String dni;
 
     @Column(name = "ENABLED")
     @NotNull
@@ -128,6 +140,22 @@ public class User extends DeletableModel{
         this.email = email;
     }
 
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
     public Boolean getEnabled() {
         return enabled;
     }
@@ -161,12 +189,13 @@ public class User extends DeletableModel{
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", email='" + email + '\'' +
+                ", cellphone='" + cellphone + '\'' +
+                ", dni='" + dni + '\'' +
                 ", enabled=" + enabled +
                 ", lastPasswordResetDate=" + lastPasswordResetDate +
                 ", authorities=" + authorities +
                 '}';
     }
-
 
     @Override
     public boolean equals(Object obj) {
