@@ -1,6 +1,5 @@
 package clasem.services.impl;
 
-import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.converter.UserConverter;
 import clasem.entities.user.User;
 import clasem.repositories.UserRepository;
@@ -77,10 +76,7 @@ public class UserServiceImpl implements UserService {
 
         User user = switchUnique(fieldName,value);
 
-        if(null != user) {
-            return false;
-        }
-        return true;
+        return verifyNullUser(user);
     }
 
     public User switchUnique(String f, Object value) {
@@ -102,9 +98,15 @@ public class UserServiceImpl implements UserService {
         if (id == null) {
             return false;
         }
-        Long nid = Long.parseLong(id.toString());
+        Long nid = Long.parseLong(id);
         User user =userRepository.findOne(nid);
-        if(null != user) {
+
+        return verifyNullUser(user);
+    }
+
+    public boolean verifyNullUser(User user) {
+
+        if (null != user) {
             return false;
         }
         return true;

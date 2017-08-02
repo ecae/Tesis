@@ -33,7 +33,6 @@ public abstract class DeletableModel extends DatedModel {
         return getDeletedAt() != null;
     }
 
-    @PrePersist
     @PreRemove
     public void onPreRemove() {
         Timestamp now = new Timestamp(new DateTime().getMillis());

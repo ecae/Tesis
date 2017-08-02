@@ -1,7 +1,5 @@
 package clasem.services;
 
-import clasem.api.exceptions.NotFoundUserIdException;
-
 public interface FieldValueExists {
     /**
      * Checks whether or not a given value exists for a given field

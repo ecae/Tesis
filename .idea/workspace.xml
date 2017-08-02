@@ -2,53 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73bc35d6-3635-45d9-a07d-bc77bf283627" name="Default" comment="Mejorando crear usuario">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/CellPhoneConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/CellPhoneValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/DniConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/DniValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueConstraint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/services/FieldValueExists.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/wrappers/TestWrapper.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/api/AdminResource.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/components/constraint/IdConstraint.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/controllers/UserController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/entities/Authority.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/entities/AuthorityName.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/entities/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/services/impl/UserServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/wrappers/CreateUserWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/clasem/wrappers/UserModifyWrapper.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/clasem/entities/Authority.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/entities/user/Authority.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/clasem/entities/AuthorityName.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/entities/user/AuthorityName.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/clasem/entities/User.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/entities/user/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/converter/UserConverter.class" afterPath="$PROJECT_DIR$/target/classes/clasem/converter/UserConverter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_9_5.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/entities/user/Log.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/repositories/AuthorityRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/clasem/repositories/LogRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/clasem/Repositories/AllRepositoriesIntegrationTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/clasem/Repositories/AuthorityRepositoryIT.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/clasem/Repositories/UserRepositoryIT.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/clasem/wrappers/TestWrapper.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/components/RequestTimeInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/clasem/components/RequestTimeInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/controllers/UserController.class" afterPath="$PROJECT_DIR$/target/classes/clasem/controllers/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/entities/DeletableModel.class" afterPath="$PROJECT_DIR$/target/classes/clasem/entities/DeletableModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/entities/user/User.class" afterPath="$PROJECT_DIR$/target/classes/clasem/entities/user/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/repositories/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/clasem/repositories/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/security/JwtUserFactory.class" afterPath="$PROJECT_DIR$/target/classes/clasem/security/JwtUserFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/services/UserService.class" afterPath="$PROJECT_DIR$/target/classes/clasem/services/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/services/impl/JwtUserDetailsServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/clasem/services/impl/JwtUserDetailsServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/wrappers/EditUserWrapper.class" afterPath="$PROJECT_DIR$/target/classes/clasem/wrappers/EditUserWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/wrappers/JwtUserWrapper.class" afterPath="$PROJECT_DIR$/target/classes/clasem/wrappers/JwtUserWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/clasem/services/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/clasem/services/impl/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookmarks.iml" afterPath="$PROJECT_DIR$/bookmarks.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/api/AdminResource.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/api/AdminResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/api/ApiExceptionHandler.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/api/ApiExceptionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/ApiException.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/ApiException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/ErrorMessage.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/ErrorMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/IdConstraint.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/IdConstraint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/IdValidator.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/constraint/IdValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/controllers/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/controllers/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/converter/UserConverter.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/converter/UserConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/components/RequestTimeInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/components/RequestTimeInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/entities/DeletableModel.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/entities/DeletableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/entities/user/User.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/entities/user/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/repositories/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/repositories/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/security/JwtUserFactory.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/security/JwtUserFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/services/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/services/impl/JwtUserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/services/impl/JwtUserDetailsServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/services/FieldValueExists.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/services/FieldValueExists.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/services/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/services/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/wrappers/CreateUserWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/wrappers/CreateUserWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/wrappers/EditUserWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/wrappers/EditUserWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/wrappers/JwtUserWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/wrappers/JwtUserWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/clasem/wrappers/UserModifyWrapper.java" afterPath="$PROJECT_DIR$/src/main/java/clasem/wrappers/UserModifyWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/import.sql" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/import.sql" afterPath="$PROJECT_DIR$/target/classes/import.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,7 +63,28 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="RequestTimeInterceptor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/RequestTimeInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="30" column="88" lean-forward="false" selection-start-line="30" selection-start-column="88" selection-end-line="30" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminResource.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/clasem/api/AdminResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -114,18 +112,11 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response48.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response72.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/clasem/services/AuthorizationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/services/impl/AuthorizationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/AlreadyExistUserFieldException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/NotFoundRolException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/wrappers/ErrorWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/services/impl/ErrorService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/converter/prueba.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/api/AuthenticationResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/api/UserResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/controllers/AuthenticationController.java" />
@@ -134,11 +125,8 @@
         <option value="$PROJECT_DIR$/src/main/java/clasem/entities/DatedModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/entities/Authority.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/entities/AuthorityName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/entities/DeletableModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/entities/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/components/RequestTimeInterceptor.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/config/webMvcConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/InvalidIdException.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/IdConstraint.java" />
@@ -146,30 +134,40 @@
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/RolValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/CellPhoneConstraint.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/DniConstraint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/entities/user/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/wrappers/EditUserWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/security/JwtUserFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/wrappers/JwtUserWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/repositories/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/import.sql" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/IdValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/wrappers/TestWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/IdConstraint.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueConstraint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/services/FieldValueExists.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/services/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/converter/UserConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/wrappers/CreateUserWrapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/CellPhoneValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/DniValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/wrappers/UserModifyWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/clasem/api/AdminResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/api/ApiExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/ApiException.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/api/exceptions/ErrorMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/clasem/controllers/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/repositories/authorityRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/repositories/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/entities/user/User.java" />
+        <option value="$PROJECT_DIR$/src/test/java/clasem/Repositories/AuthorityRepositoryIT.java" />
+        <option value="$PROJECT_DIR$/src/test/java/clasem/Repositories/AllRepositoriesIntegrationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/services/FieldValueExists.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/clasem/Repositories/UserRepositoryIT.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/services/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/clasem/services/UserServiceIT.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/entities/DeletableModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/entities/user/Log.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/repositories/LogRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/components/RequestTimeInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/clasem/api/AdminResource.java" />
       </list>
     </option>
   </component>
@@ -191,10 +189,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="730" />
-    <option name="y" value="116" />
-    <option name="width" value="1372" />
-    <option name="height" value="704" />
+    <option name="x" value="467" />
+    <option name="y" value="136" />
+    <option name="width" value="1370" />
+    <option name="height" value="696" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -214,9 +212,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,45 +265,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="clasem" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clasem" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clasem" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="constraint" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clasem" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clasem" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
@@ -314,25 +275,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="clasem" type="462c0819:PsiDirectoryNode" />
               <item name="converter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clasem" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="clasem" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
@@ -387,11 +329,31 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bookmarks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="clasem" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,6 +371,540 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae2&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eeee@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617444&quot;,&quot;cellphone&quot;:&quot;945045784&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae2&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eeee@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617444&quot;,&quot;cellphone&quot;:&quot;945045784&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae2&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eeee@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617444&quot;,&quot;cellphone&quot;:&quot;945045784&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/4" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae2&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eeee@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617444&quot;,&quot;cellphone&quot;:&quot;945045784&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/4" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae2&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eeee@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617444&quot;,&quot;cellphone&quot;:&quot;945045784&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/4" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae2&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eeee@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617444&quot;,&quot;cellphone&quot;:&quot;945045784&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/create" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae2&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eeee@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617444&quot;,&quot;cellphone&quot;:&quot;945045784&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/users" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae1&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eric@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617459&quot;,&quot;cellphone&quot;:&quot;945045789&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/create" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae1&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eric@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;,&quot;dni&quot;:&quot;72617459&quot;,&quot;cellphone&quot;:&quot;945045789&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/create" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae1&quot;,&quot;firstname&quot;:&quot;Erick Alexander&quot;,&quot;lastname&quot;:&quot;Cruz Estrada&quot;,&quot;email&quot;:&quot;eric@gmail.com&quot;,&quot;password&quot;:&quot;alexander&quot;,&quot;rol&quot;:&quot;ROLE_USER&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/create" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;cellphone&quot;:&quot;9420567&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/create" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;cellphone&quot;:&quot;942056789&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;cellphone&quot;:&quot;942056789&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;cellphone&quot;:&quot;942052433&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/users" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;cellphone&quot;:&quot;942052433&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;cellphone&quot;:&quot;942052433&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;cellphone&quot;:&quot;942052433&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;cellphone&quot;:&quot;9420524553&quot;,&quot;dni&quot;:&quot;726173988&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;username&quot;:&quot;admin&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;enabled&quot;:&quot;false&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;enabled&quot;:true}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;enabled&quot;:&quot;true&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3/edit" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;enabeld&quot;:&quot;true&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/users" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;email&quot;:&quot;admin@admin.com&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/admin/user/3" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="{&quot;email&quot;:&quot;admin@admin.com&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="PUT" />
           <option name="urlBase" value="http://localhost:8080" />
@@ -925,533 +1421,6 @@
           <option name="textToSend" value="{&quot;username&quot;:&quot;admin&quot;,&quot;email&quot;:&quot;admin@admin.com&quot;,&quot;dni&quot;: &quot;72617398&quot;,&quot;cellphone&quot;:&quot;942052431&quot;}" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/test/72617398" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_ADMIN&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/test/admin@admin.com" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_ADMIN&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/test/admin" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_ADMIN&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/test/admin@admin.com " />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_ADMIN&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/test/ecae1" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_ADMIN&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/test/" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_ADMIN&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/create" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_ADMIN&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/create" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_AD&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/-8" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_AD&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/2" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ec&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri&quot;, &quot;rol&quot;:&quot;ROLE_AD&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/create" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri@hotmail.com&quot;, &quot;rol&quot;:&quot;ROLE_ADM&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/create" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;ecae1&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri@hotmail.com&quot;, &quot;rol&quot;:&quot;ROLE_ADM&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/create" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;username&quot;:&quot;admin&quot;, &quot;firstname&quot;:&quot;alexander&quot;, &quot;lastname&quot;:&quot;cruz es&quot;, &quot;password&quot;:&quot;323333&quot;, &quot;email&quot;:&quot;erri@hotmail.com&quot;, &quot;rol&quot;:&quot;ROLE_ADMIN&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;password&quot;:&quot;admin&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/-8" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;password&quot;:&quot;admin&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/ " />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;password&quot;:&quot;admin&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="DELETE" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/-8" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;password&quot;:&quot;admin&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;password&quot;:&quot;admin&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/--4" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="{&quot;password&quot;:&quot;admin&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="PUT" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/--4/edit" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;password&quot;:&quot;admin&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/--4/edit" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;password&quot;:&quot;admin&quot;}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/2" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/2/edit" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/-2/edit" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/users" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="DELETE" />
-          <option name="urlBase" value="http://localhost:8080" />
-          <option name="urlPath" value="/admin/user/3" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUwMTExMjc2MjYwNCwiZXhwIjoxNTAxNzE3NTYyfQ.LOTz5gDJ0x050waz161K8vtocHn_O4knCS8fpnSvMteEAVPIxGa8L6a4P1cg5i-1u0W9qPWFjtaQkJbPvrM0XQ" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
       </list>
     </option>
   </component>
@@ -1468,6 +1437,56 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.BackendApplication">
+    <configuration name="AllRepositoriesIntegrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="clasem.Repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bookmarks" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="clasem.Repositories" />
+      <option name="MAIN_CLASS_NAME" value="clasem.Repositories.AllRepositoriesIntegrationTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="AuthorityRepositoryIT.testCountAuthority" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="clasem.Repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bookmarks" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="clasem.Repositories" />
+      <option name="MAIN_CLASS_NAME" value="clasem.Repositories.AuthorityRepositoryIT" />
+      <option name="METHOD_NAME" value="testCountAuthority" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="clasem.BackendApplication" />
@@ -1475,6 +1494,81 @@
       <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-8-oracle/jre" />
       <module name="bookmarks" />
       <envs />
+    </configuration>
+    <configuration name="UserRepositoryIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="clasem.Repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bookmarks" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="clasem.Repositories" />
+      <option name="MAIN_CLASS_NAME" value="clasem.Repositories.UserRepositoryIT" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserServiceIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="clasem.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bookmarks" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="clasem.services" />
+      <option name="MAIN_CLASS_NAME" value="clasem.services.UserServiceIT" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserServiceIT.testCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="clasem.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="bookmarks" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="clasem.services" />
+      <option name="MAIN_CLASS_NAME" value="clasem.services.UserServiceIT" />
+      <option name="METHOD_NAME" value="testCreateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
@@ -1562,32 +1656,21 @@
       <envs />
       <method />
     </configuration>
-    <configuration name="prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="clasem.converter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="clasem.converter.prueba" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bookmarks" />
-      <envs />
-    </configuration>
-    <list size="2">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.BackendApplication" />
-      <item index="1" class="java.lang.String" itemvalue="Application.prueba" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UserRepositoryIT" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AuthorityRepositoryIT.testCountAuthority" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AllRepositoriesIntegrationTests" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserServiceIT.testCreateUser" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.UserServiceIT" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.prueba" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserServiceIT.testCreateUser" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserServiceIT" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AllRepositoriesIntegrationTests" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AuthorityRepositoryIT.testCountAuthority" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UserRepositoryIT" />
       </list>
     </recent_temporary>
   </component>
@@ -1636,12 +1719,45 @@
       <workItem from="1501347999290" duration="7262000" />
       <workItem from="1501456241037" duration="14808000" />
       <workItem from="1501512231426" duration="4274000" />
-      <workItem from="1501521515650" duration="12904000" />
+      <workItem from="1501521515650" duration="13150000" />
+      <workItem from="1501616995942" duration="19058000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="UserServiceIT - 2017.08.01 at 18h 32m 49s.xml">
+      <configuration name="UserServiceIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT - 2017.08.01 at 18h 36m 08s.xml">
+      <configuration name="UserServiceIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT - 2017.08.01 at 18h 38m 29s.xml">
+      <configuration name="UserServiceIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT - 2017.08.01 at 18h 58m 44s.xml">
+      <configuration name="UserServiceIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT - 2017.08.01 at 19h 03m 12s.xml">
+      <configuration name="UserServiceIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT_testCreateUser - 2017.08.01 at 18h 07m 23s.xml">
+      <configuration name="UserServiceIT.testCreateUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT_testCreateUser - 2017.08.01 at 18h 19m 21s.xml">
+      <configuration name="UserServiceIT.testCreateUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT_testCreateUser - 2017.08.01 at 18h 26m 51s.xml">
+      <configuration name="UserServiceIT.testCreateUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT_testCreateUser - 2017.08.01 at 18h 30m 11s.xml">
+      <configuration name="UserServiceIT.testCreateUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceIT_testCreateUser - 2017.08.01 at 19h 13m 33s.xml">
+      <configuration name="UserServiceIT.testCreateUser" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191258000" />
+    <option name="totallyTimeSpent" value="210562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1665,12 +1781,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="true" show_stripe_button="true" weight="0.7652778" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="0" y="24" width="1440" height="821" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55886525" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3106383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63404256" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21162124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22525108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1738,7 +1854,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1747,156 +1863,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/api/exceptions/InvalidIdException.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/constraint/RolValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final-sources.jar!/javax/validation/ConstraintViolation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-506">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/impl/ErrorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/api/UserResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/api/AuthenticationResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/entities/user/Authority.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/entities/user/AuthorityName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/constraint/RolConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/constraint/CellPhoneConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/security/JwtUserFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/impl/JwtUserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.12.6.RELEASE/spring-data-commons-1.12.6.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final-sources.jar!/javax/validation/ConstraintValidatorContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1919">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.12.6.RELEASE/spring-data-commons-1.12.6.RELEASE-sources.jar!/org/springframework/data/repository/query/QueryByExampleExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="29" column="44" lean-forward="true" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.10.6.RELEASE/spring-data-jpa-1.10.6.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1217">
-          <caret line="37" column="66" lean-forward="false" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/repositories/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/entities/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="259" lean-forward="false" selection-start-line="0" selection-start-column="257" selection-end-line="0" selection-end-column="272" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.5.RELEASE/spring-web-4.3.5.RELEASE-sources.jar!/org/springframework/http/HttpStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1255">
-          <caret line="213" column="30" lean-forward="false" selection-start-line="213" selection-start-column="29" selection-end-line="213" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/impl/AuthorizationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1944,39 +1914,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/FieldValueExists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="84" lean-forward="false" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/clasem/wrappers/EditUserWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
           <folding>
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/converter/UserConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="56" column="60" lean-forward="false" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
-          <folding>
-            <marker date="1501531949091" expanded="true" signature="2383:2392" ph="{...}" />
+            <element signature="e#853#854#0" expanded="false" />
+            <element signature="e#884#885#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1985,7 +1929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-723">
           <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2018,38 +1961,8 @@
         <state relative-caret-position="177">
           <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#AuthorityRol#0;class#UserModifyWrapper#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/wrappers/CreateUserWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2058,7 +1971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-171">
           <caret line="28" column="67" lean-forward="true" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2078,14 +1990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/api/AdminResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="47" column="105" lean-forward="false" selection-start-line="47" selection-start-column="105" selection-end-line="47" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/clasem/api/ApiExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -2099,10 +2003,10 @@
         <state relative-caret-position="391">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="false" />
+            <element signature="e#286#287#0" expanded="false" />
+            <element signature="e#907#908#0" expanded="false" />
+            <element signature="e#1002#1003#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2128,8 +2032,8 @@
         <state relative-caret-position="46">
           <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
           <folding>
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="false" />
+            <element signature="e#448#449#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2147,8 +2051,8 @@
         <state relative-caret-position="161">
           <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#205#206#0" expanded="false" />
+            <element signature="e#239#240#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2157,6 +2061,268 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/clasem/BackendApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/clasem/entities/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/entities/user/Authority.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/repositories/AuthorityRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/repositories/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/entities/DatedModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="49" column="66" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/import.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="259" lean-forward="false" selection-start-line="0" selection-start-column="257" selection-end-line="0" selection-end-column="272" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/converter/UserConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="100" column="8" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="104" selection-end-column="55" />
+          <folding>
+            <marker date="1501531949091" expanded="true" signature="2383:2392" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/clasem/Repositories/AuthorityRepositoryIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/clasem/Repositories/AllRepositoriesIntegrationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueConstraint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/constraint/UniqueValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/FieldValueExists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="44" lean-forward="true" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/wrappers/CreateUserWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="47" column="155" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="155" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/constraint/RolValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/After.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="87" column="48" lean-forward="false" selection-start-line="87" selection-start-column="48" selection-end-line="89" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/clasem/Repositories/UserRepositoryIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/services/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-620">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/entities/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/clasem/services/UserServiceIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="956">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/entities/DeletableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/entities/user/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/security/JwtAuthenticationTokenFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="42" column="96" lean-forward="false" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/repositories/LogRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/components/RequestTimeInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="30" column="88" lean-forward="false" selection-start-line="30" selection-start-column="88" selection-end-line="30" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/clasem/api/AdminResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
       </provider>

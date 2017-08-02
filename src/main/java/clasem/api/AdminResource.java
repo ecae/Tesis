@@ -57,16 +57,10 @@ public class AdminResource {
         return userController.userModify(iden,userModifyWrapper);
     }
 
-    @RequestMapping(value ="/user/{id}",method = RequestMethod.DELETE)
+    @RequestMapping(value ="/user/{id}/delete",method = RequestMethod.DELETE)
     public ResponseEntity userDestroy(@Valid @IdConstraint(service = UserService.class) @PathVariable(value = "id")  String id ) {
         Long iden = Long.parseLong(id);
         return userController.userDelete(iden);
-    }
-
-    @RequestMapping(value ="/test",method = RequestMethod.POST)
-    public String test(@Valid @RequestBody TestWrapper testWrapper, Errors errors)  {
-
-        return "pasaron todas las validaciones usuario disponible: " + testWrapper.toString();
     }
 
 }

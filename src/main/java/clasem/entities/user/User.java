@@ -92,6 +92,19 @@ public class User extends DeletableModel {
     public User() {
     }
 
+    public User(String username, String password, String firstname, String lastname, String email, String cellphone, String dni, Boolean enabled, Date lastPasswordResetDate, List<Authority> authorities) {
+        this.username = username;
+        this.password = password;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.cellphone = cellphone;
+        this.dni = dni;
+        this.enabled = enabled;
+        this.lastPasswordResetDate = lastPasswordResetDate;
+        this.authorities = authorities;
+    }
+
     public Long getId() {
         return id;
     }
