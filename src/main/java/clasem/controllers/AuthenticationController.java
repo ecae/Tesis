@@ -2,7 +2,7 @@ package clasem.controllers;
 
 import clasem.security.JwtTokenUtil;
 import clasem.services.AuthorizationService;
-import clasem.wrappers.JwtUserWrapper;
+import clasem.wrappers.user.JwtUserWrapper;
 import clasem.wrappers.TokenWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

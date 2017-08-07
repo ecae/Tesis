@@ -3,19 +3,20 @@ package clasem.converter;
 import clasem.entities.user.Authority;
 import clasem.entities.user.AuthorityName;
 import clasem.entities.user.User;
-import clasem.wrappers.CreateUserWrapper;
-import clasem.wrappers.EditUserWrapper;
-import clasem.wrappers.ListUsersWrapper;
-import clasem.wrappers.UserModifyWrapper;
+import clasem.wrappers.user.CreateUserWrapper;
+import clasem.wrappers.user.EditUserWrapper;
+import clasem.wrappers.user.ListUsersWrapper;
+import clasem.wrappers.user.UserModifyWrapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Controller
+@Component
 public class UserConverter {
 
     private static final Log log = LogFactory.getLog(UserConverter.class);

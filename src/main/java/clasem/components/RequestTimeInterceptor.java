@@ -32,13 +32,13 @@ public class RequestTimeInterceptor extends HandlerInterceptorAdapter {
         long startime = (long) request.getAttribute("starTime");
         String url = request.getRequestURL().toString();
 
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        /*Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = "";
         if (auth != null && auth.isAuthenticated()) {
             username = auth.getName();
         }
 
-        logRepository.save(new clasem.entities.user.Log(new Date(),auth.getDetails().toString(),username,url));
+        logRepository.save(new clasem.entities.user.Log(new Date(),auth.getDetails().toString(),username,url));*/
 
         LOG.info("Url to: '" + url + "' in: '" + (System.currentTimeMillis() - startime) + "ms'");
     }

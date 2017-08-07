@@ -5,13 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import clasem.controllers.UserController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import clasem.security.JwtTokenUtil;
-import clasem.wrappers.JwtUserWrapper;
+import clasem.wrappers.user.JwtUserWrapper;
 
 @RestController
 public class UserResource {

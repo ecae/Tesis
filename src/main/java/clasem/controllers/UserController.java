@@ -1,13 +1,11 @@
 package clasem.controllers;
 
-import clasem.api.exceptions.AlreadyExistUserFieldException;
 import clasem.api.exceptions.InvalidFieldModifyUserException;
-import clasem.api.exceptions.NotFoundUserIdException;
 import clasem.entities.user.User;
 import clasem.repositories.UserRepository;
 import clasem.security.JwtTokenUtil;
 import clasem.services.UserService;
-import clasem.wrappers.*;
+import clasem.wrappers.user.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

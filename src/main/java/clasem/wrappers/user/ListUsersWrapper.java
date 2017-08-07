@@ -1,4 +1,4 @@
-package clasem.wrappers;
+package clasem.wrappers.user;
 
 public class ListUsersWrapper {
 

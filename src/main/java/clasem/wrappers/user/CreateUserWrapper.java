@@ -1,56 +1,58 @@
-package clasem.wrappers;
+package clasem.wrappers.user;
 
 import clasem.components.constraint.CellPhoneConstraint;
 import clasem.components.constraint.DniConstraint;
-import clasem.components.constraint.IdConstraint;
-import clasem.components.constraint.UniqueConstraint;
+import clasem.components.constraint.RolConstraint;
 import clasem.entities.user.AuthorityName;
-import clasem.services.UserService;
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class UserModifyWrapper {
+public class CreateUserWrapper {
 
-    @Size(min = 5,max = 10)
+    @NotEmpty
+    @Size(min = 5,max = 20)
     String username;
 
+    @NotEmpty
     @Size(min = 3,max = 20)
     String firstname;
 
+    @NotEmpty
     @Size(min = 3,max = 20)
     String lastname;
 
-    @Size(min = 5,max = 20)
-    String password;
-
-    @Email(message = "Ingrese un email valido")
+    @NotEmpty
+    @Email(message = "Ingrese un email válido")
     String email;
 
+    @NotEmpty
     @DniConstraint
     String dni;
 
+    @NotEmpty
     @CellPhoneConstraint
     String cellphone;
 
-    boolean enabled;
+    @NotEmpty
+    @Size(min = 5,max = 20)
+    String password;
 
-    @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="El rol establecido no es valido")
+    @RolConstraint
     String rol;
 
-    public UserModifyWrapper() {
+    public CreateUserWrapper() {
     }
 
-    public UserModifyWrapper(String username, String firstname, String lastname, String password, String email, String dni, String cellphone, boolean enabled, String rol) {
+    public CreateUserWrapper(String username, String firstname, String lastname, String email, String dni, String cellphone, String password, String rol) {
         this.username = username;
         this.firstname = firstname;
         this.lastname = lastname;
-        this.password = password;
         this.email = email;
         this.dni = dni;
         this.cellphone = cellphone;
-        this.enabled = enabled;
+        this.password = password;
         this.rol = rol;
     }
 
@@ -86,14 +88,6 @@ public class UserModifyWrapper {
         this.password = password;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getDni() {
         return dni;
     }
@@ -110,45 +104,33 @@ public class UserModifyWrapper {
         this.cellphone = cellphone;
     }
 
-    public boolean isEnabled() {
-        return enabled;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getRol() {
-        return rol;
-    }
-
-    public AuthorityName AuthorityRol() {
-        if(this.rol != null) {
-            AuthorityName authorityName = AuthorityName.valueOf(rol);
-            return authorityName;
-        }
-        return null;
+    public AuthorityName getRol() {
+         AuthorityName authorityName = AuthorityName.valueOf(rol);
+         return authorityName;
     }
 
     public void setRol(String rol) {
         this.rol = rol;
     }
 
-    public String rolString() {
-        return rol;
-    }
-
     @Override
     public String toString() {
-        return "UserModifyWrapper{" +
+        return "CreateUserWrapper{" +
                 "username='" + username + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", dni='" + dni + '\'' +
                 ", cellphone='" + cellphone + '\'' +
-                ", enabled=" + enabled +
+                ", password='" + password + '\'' +
                 ", rol='" + rol + '\'' +
                 '}';
     }

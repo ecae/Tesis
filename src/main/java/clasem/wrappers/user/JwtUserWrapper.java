@@ -1,4 +1,4 @@
-package clasem.wrappers;
+package clasem.wrappers.user;
 
 import java.util.Collection;
 import java.util.Date;

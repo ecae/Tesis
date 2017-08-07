@@ -1,10 +1,10 @@
 package clasem.services;
 
 import clasem.entities.user.User;
-import clasem.wrappers.CreateUserWrapper;
-import clasem.wrappers.EditUserWrapper;
-import clasem.wrappers.ListUsersWrapper;
-import clasem.wrappers.UserModifyWrapper;
+import clasem.wrappers.user.CreateUserWrapper;
+import clasem.wrappers.user.EditUserWrapper;
+import clasem.wrappers.user.ListUsersWrapper;
+import clasem.wrappers.user.UserModifyWrapper;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

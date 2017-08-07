@@ -3,7 +3,7 @@ package clasem.security;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import clasem.wrappers.JwtUserWrapper;
+import clasem.wrappers.user.JwtUserWrapper;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
