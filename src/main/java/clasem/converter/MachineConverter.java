@@ -4,6 +4,7 @@ import clasem.entities.core.Machine;
 import clasem.wrappers.machine.CreateMachineWrapper;
 import clasem.wrappers.machine.EditMachineWrapper;
 import clasem.wrappers.machine.ListMachineWrapper;
+import clasem.wrappers.machine.MachineModifyWrapper;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,6 +14,7 @@ public class MachineConverter {
         ListMachineWrapper listMachineWrapper = new ListMachineWrapper();
         listMachineWrapper.setId(machine.getId());
         listMachineWrapper.setMark(machine.getMark());
+        listMachineWrapper.setModel(machine.getModel());
         listMachineWrapper.setNamemachine(machine.getNamemachine());
         return listMachineWrapper;
     }
@@ -42,5 +44,19 @@ public class MachineConverter {
         machine.setDatepurchase(createMachineWrapper.getDatepurchase());
         machine.setEnabled(true);
         return machine;
+    }
+
+    public Machine machineModifyWrapper2Machine(Machine machine,MachineModifyWrapper machineModifyWrapper) {
+        machine.setFabricator(machineModifyWrapper.getFabricator());
+        machine.setModel(machineModifyWrapper.getModel());
+        machine.setMark(machineModifyWrapper.getMark());
+        machine.setNamemachine(machineModifyWrapper.getNamemachine());
+        machine.setSerie(machineModifyWrapper.getSerie());
+        machine.setDatepurchase(machineModifyWrapper.getDatepurchase());
+        machine.setEnabled(machineModifyWrapper.isEnabled());
+        if(machineModifyWrapper.getImage() != null){
+            machine.setMachineImage(machineModifyWrapper.getImage().getOriginalFilename());
+        }
+        return  machine;
     }
 }

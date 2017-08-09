@@ -36,7 +36,7 @@ public class ApiExceptionHandler {
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler({InvalidUserFieldException.class, InvalidImageException.class})
+    @ExceptionHandler({InvalidUserFieldException.class})
     @ResponseBody
     public ErrorMessage badRequest(ApiException exception) {
 
@@ -45,7 +45,7 @@ public class ApiExceptionHandler {
     }
 
     @ResponseStatus(HttpStatus.CONFLICT)
-    @ExceptionHandler({AlreadyExistUserFieldException.class, InvalidFieldModifyUserException.class, AlreadyExistUserFieldException.class})
+    @ExceptionHandler({AlreadyExistUserFieldException.class, InvalidFieldModifyUserException.class, InvalidFieldMachineModifyException.class})
     @ResponseBody
     public ErrorMessage conflictRequest(ApiException exception) {
         ErrorMessage apiErrorMessage = new ErrorMessage(exception);

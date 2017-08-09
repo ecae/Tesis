@@ -7,7 +7,6 @@ clasem/entities/DeletableModel.class
 clasem/api/exceptions/InvalidFieldModifyUserException.class
 clasem/api/AdminResource.class
 clasem/components/constraint/IdConstraint.class
-clasem/components/constraint/ImageNotEmptyConstraint.class
 clasem/api/exceptions/NotFoundRolException.class
 clasem/api/UserResource.class
 clasem/entities/user/Log.class
@@ -15,7 +14,6 @@ clasem/entities/core/Machine.class
 clasem/components/constraint/DniConstraint.class
 clasem/components/constraint/CellPhoneConstraint.class
 clasem/api/exceptions/AlreadyExistUserFieldException.class
-clasem/components/constraint/ImageNotEmpyValidator.class
 clasem/security/JwtAuthenticationTokenFilter.class
 clasem/api/exceptions/UnauthorizedException.class
 clasem/controllers/UserController.class
@@ -43,7 +41,6 @@ clasem/api/AuthenticationResource.class
 clasem/controllers/AuthenticationController.class
 clasem/components/constraint/RolConstraint.class
 clasem/entities/user/Authority.class
-clasem/wrappers/machine/FileTest.class
 clasem/api/exceptions/ApiException.class
 clasem/components/constraint/IdValidator.class
 clasem/api/exceptions/ErrorLoginException.class
@@ -60,7 +57,6 @@ clasem/services/FieldValueExists.class
 clasem/components/constraint/RolValidator.class
 clasem/wrappers/ErrorWrapper.class
 clasem/services/impl/UserServiceImpl.class
-clasem/api/exceptions/InvalidImageException.class
 clasem/security/JwtTokenUtil.class
 clasem/BackendApplication.class
 clasem/wrappers/machine/EditMachineWrapper.class

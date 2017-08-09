@@ -10,7 +10,6 @@ import clasem.wrappers.user.UserModifyWrapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -62,27 +61,17 @@ public class UserConverter {
         return user;
     }
 
-    public User userModifyWrapper2User(User user ,UserModifyWrapper userModifyWrapper) {
+    public User userModifyWrapper2User(User user, UserModifyWrapper userModifyWrapper) {
 
-        if(userModifyWrapper.getUsername() != null){
-            user.setUsername(userModifyWrapper.getUsername());
-        }
-        if(userModifyWrapper.getFirstname() != null){
-            user.setFirstname(userModifyWrapper.getFirstname());
-        }
-        if(userModifyWrapper.getLastname() != null){
-            user.setLastname(userModifyWrapper.getLastname());
-        }
-        if(userModifyWrapper.getEmail() != null){
-            user.setEmail(userModifyWrapper.getEmail());
-        }
-        if(userModifyWrapper.isEnabled()){
-            user.setEnabled(userModifyWrapper.isEnabled());
-        }
-        if(userModifyWrapper.getRol() != null){
-            user.setAuthorities(setAuthorities(userModifyWrapper.AuthorityRol()));
-        }
-        if(userModifyWrapper.getPassword() != null){
+        user.setUsername(userModifyWrapper.getUsername());
+        user.setFirstname(userModifyWrapper.getFirstname());
+        user.setLastname(userModifyWrapper.getLastname());
+        user.setEmail(userModifyWrapper.getEmail());
+        user.setDni(userModifyWrapper.getDni());
+        user.setCellphone(userModifyWrapper.getCellphone());
+        user.setEnabled(userModifyWrapper.isEnabled());
+        user.setAuthorities(setAuthorities(userModifyWrapper.AuthorityRol()));
+        if (userModifyWrapper.getPassword() != null) {
             user.setPassword(userModifyWrapper.getPassword());
             user.setLastPasswordResetDate(new Date());
         }
@@ -90,16 +79,16 @@ public class UserConverter {
     }
 
     public String getRol(List<Authority> authorities) {
-        if(authorities.size() < 2) {
+        if (authorities.size() < 2) {
             return "ROLE_USER";
-        }else {
+        } else {
             return "ROLE_ADMIN";
         }
     }
 
-    public List<Authority> setAuthorities (AuthorityName authorityName) {
+    public List<Authority> setAuthorities(AuthorityName authorityName) {
 
-        List<Authority> authorities= new ArrayList<Authority>();
+        List<Authority> authorities = new ArrayList<Authority>();
         Authority authorityUser = new Authority();
         Authority authorityAdmin = new Authority();
         authorityUser.setId(1);
@@ -107,11 +96,11 @@ public class UserConverter {
         authorityAdmin.setId(2);
         authorityAdmin.setName(AuthorityName.ROLE_ADMIN);
 
-        if(authorityName == AuthorityName.ROLE_ADMIN) {
+        if (authorityName == AuthorityName.ROLE_ADMIN) {
             authorities.add(authorityUser);
             authorities.add(authorityAdmin);
             return authorities;
-        }else {
+        } else {
             authorities.add(authorityUser);
             return authorities;
         }

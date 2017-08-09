@@ -7,7 +7,10 @@ import clasem.services.MachineService;
 import clasem.wrappers.machine.CreateMachineWrapper;
 import clasem.wrappers.machine.EditMachineWrapper;
 import clasem.wrappers.machine.ListMachineWrapper;
+import clasem.wrappers.machine.MachineModifyWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.springframework.web.multipart.MultipartFile;
@@ -22,7 +25,7 @@ import java.util.List;
 @Service
 public class MachineServiceImpl implements MachineService {
 
-    private static String UPLOADED_FOLDER = "src/main/resources/static/";
+    private static String UPLOADED_FOLDER = "src/main/resources/static/imageMachine/";
 
     @Autowired
     private MachineRepository machineRepository;
@@ -50,9 +53,20 @@ public class MachineServiceImpl implements MachineService {
     @Override
     public void saveMachine(CreateMachineWrapper createMachineWrapper) {
         machineRepository.save(machineConverter.createMachineWrapper2Machine(createMachineWrapper));
+        storageFile(createMachineWrapper.getImage());
+    }
 
+    @Override
+    public ResponseEntity updateMachine(Machine machine,MachineModifyWrapper machineModifyWrapper) {
+
+        machineRepository.save(machineConverter.machineModifyWrapper2Machine(machine,machineModifyWrapper));
+        storageFile(machineModifyWrapper.getImage());
+        return new ResponseEntity("Maquinaria modificada correctamente", HttpStatus.OK);
+    }
+
+
+    private void storageFile(MultipartFile file) {
         try {
-            MultipartFile file = createMachineWrapper.getImage();
             byte[] bytes = file.getBytes();
 
             Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
@@ -82,16 +96,20 @@ public class MachineServiceImpl implements MachineService {
 
     @Override
     public boolean fieldIdExists(String id) throws UnsupportedOperationException {
-        if (id == null) {
+
+        if (id == null  || id == "") {
             return false;
         }
         int nid = Integer.parseInt(id);
-        Machine machine =machineRepository.findOne(nid);
+        Machine machine = machineRepository.findById(nid);
 
-        return verifyNullMachine(machine);
+        if (null != machine) {
+            return false;
+        }
+        return true;
     }
 
-    public boolean verifyNullMachine(Machine machine) {
+    private boolean verifyNullMachine(Machine machine) {
 
         if (null == machine) {
             return false;

@@ -3,7 +3,9 @@ package clasem.wrappers.user;
 import clasem.components.constraint.CellPhoneConstraint;
 import clasem.components.constraint.DniConstraint;
 import clasem.components.constraint.RolConstraint;
+import clasem.components.constraint.UniqueConstraint;
 import clasem.entities.user.AuthorityName;
+import clasem.services.UserService;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -13,6 +15,7 @@ public class CreateUserWrapper {
 
     @NotEmpty
     @Size(min = 5,max = 20)
+    @UniqueConstraint(service = UserService.class,fieldName = "username")
     String username;
 
     @NotEmpty
@@ -25,14 +28,17 @@ public class CreateUserWrapper {
 
     @NotEmpty
     @Email(message = "Ingrese un email válido")
+    @UniqueConstraint(service = UserService.class,fieldName = "email")
     String email;
 
     @NotEmpty
     @DniConstraint
+    @UniqueConstraint(service = UserService.class,fieldName = "dni")
     String dni;
 
     @NotEmpty
     @CellPhoneConstraint
+    @UniqueConstraint(service = UserService.class,fieldName = "cellphone")
     String cellphone;
 
     @NotEmpty

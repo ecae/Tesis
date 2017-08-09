@@ -101,12 +101,16 @@ public class UserServiceImpl implements UserService {
         Long nid = Long.parseLong(id);
         User user =userRepository.findOne(nid);
 
-        return verifyNullUser(user);
+        if (null != user) {
+            return false;
+        }
+        return true;
+
     }
 
     public boolean verifyNullUser(User user) {
 
-        if (null != user) {
+        if (null == user) {
             return false;
         }
         return true;

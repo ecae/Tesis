@@ -2,42 +2,46 @@ package clasem.wrappers.user;
 
 import clasem.components.constraint.CellPhoneConstraint;
 import clasem.components.constraint.DniConstraint;
-import clasem.components.constraint.IdConstraint;
-import clasem.components.constraint.UniqueConstraint;
+import clasem.components.constraint.RolConstraint;
 import clasem.entities.user.AuthorityName;
-import clasem.services.UserService;
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class UserModifyWrapper {
 
-    @Size(min = 5,max = 10)
+    @NotEmpty
+    @Size(min = 5,max = 20)
     String username;
 
+    @NotEmpty
     @Size(min = 3,max = 20)
     String firstname;
 
+    @NotEmpty
     @Size(min = 3,max = 20)
     String lastname;
+
+    @NotEmpty
+    @Email(message = "Ingrese un email válido")
+    String email;
+
+    @NotEmpty
+    @DniConstraint
+    String dni;
+
+    @NotEmpty
+    @CellPhoneConstraint
+    String cellphone;
 
     @Size(min = 5,max = 20)
     String password;
 
-    @Email(message = "Ingrese un email valido")
-    String email;
-
-    @DniConstraint
-    String dni;
-
-    @CellPhoneConstraint
-    String cellphone;
+    @RolConstraint
+    String rol;
 
     boolean enabled;
-
-    @Pattern(regexp="^(ROLE_ADMIN|ROLE_USER)$",message="El rol establecido no es valido")
-    String rol;
 
     public UserModifyWrapper() {
     }

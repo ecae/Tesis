@@ -64,7 +64,6 @@ public class UserController {
     }
 
     public ResponseEntity createUser(CreateUserWrapper createUserWrapper) {
-
             userService.addUser(createUserWrapper);
             return new ResponseEntity("Usuario creado correctamente", HttpStatus.OK);
     }
@@ -72,14 +71,18 @@ public class UserController {
     public ResponseEntity userModify(long id ,UserModifyWrapper userModifyWrapper) throws InvalidFieldModifyUserException {
 
         User user = userRepository.findOne(id);
+        User F2Username =  userRepository.findByUsername(userModifyWrapper.getUsername());
+        User F2Dni = userRepository.findByDni(userModifyWrapper.getDni());
+        User F2Email = userRepository.findByEmail(userModifyWrapper.getEmail());
+        User F2Cellphone = userRepository.findByCellphone(userModifyWrapper.getCellphone());
 
-        if ((userRepository.findByUsername(userModifyWrapper.getUsername()) != null) && (user.getId() != userRepository.findByUsername(userModifyWrapper.getUsername()).getId())) {
+        if ((F2Username != null) && (user.getId() != F2Username.getId())) {
             throw new InvalidFieldModifyUserException("Usuario ya esta en uso");
-        }else if((userRepository.findByDni(userModifyWrapper.getDni()) != null) && (user.getId() != userRepository.findByDni(userModifyWrapper.getDni()).getId())){
+        }else if((F2Dni != null) && (user.getId() != F2Dni.getId())){
             throw new InvalidFieldModifyUserException("Dni ya esta en uso");
-        }else if ((userRepository.findByEmail(userModifyWrapper.getEmail()) != null) && (user.getId() != userRepository.findByEmail(userModifyWrapper.getEmail()).getId())){
+        }else if ((F2Email != null) && (user.getId() != F2Email.getId())){
             throw new InvalidFieldModifyUserException("Email ya esta en uso");
-        }else if ((userRepository.findByCellphone(userModifyWrapper.getCellphone()) != null) && (user.getId() != userRepository.findByCellphone(userModifyWrapper.getCellphone()).getId())){
+        }else if ((F2Cellphone != null) && (user.getId() != F2Cellphone.getId())){
             throw new InvalidFieldModifyUserException("Celular ya esta en uso");
         }else{
             return userService.userModify(user,userModifyWrapper);

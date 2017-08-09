@@ -1,6 +1,6 @@
 package clasem.api.exceptions;
 
-public class InvalidImageException extends ApiException {
+public class InvalidFieldMachineModifyException extends ApiException {
 
     private static final long serialVersionUID = -1344640612384805385L;
 
@@ -8,11 +8,11 @@ public class InvalidImageException extends ApiException {
 
     public static final int CODE = 22;
 
-    public InvalidImageException() {
+    public InvalidFieldMachineModifyException() {
         this("");
     }
 
-    public InvalidImageException(String detail) {
+    public InvalidFieldMachineModifyException(String detail) {
         super(DESCRIPTION + "" + detail, CODE);
     }
 

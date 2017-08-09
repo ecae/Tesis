@@ -5,6 +5,7 @@ import clasem.components.constraint.MultipartFileNotEmpty;
 import clasem.components.constraint.UniqueConstraint;
 import clasem.components.constraint.UploadSizeConstraint;
 import clasem.services.MachineService;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -14,23 +15,23 @@ import java.util.Date;
 
 public class CreateMachineWrapper {
 
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String fabricator;
 
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String mark;
 
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String model;
 
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String namemachine;
 
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     @UniqueConstraint(service = MachineService.class,fieldName = "serie")
     private String serie;

@@ -1,73 +1,50 @@
-package clasem.entities.core;
+package clasem.wrappers.machine;
 
-import clasem.entities.DeletableModel;
-import org.hibernate.annotations.ResultCheckStyle;
-import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.Where;
+import clasem.components.constraint.ImageConstraint;
+import clasem.components.constraint.UniqueConstraint;
+import clasem.components.constraint.UploadSizeConstraint;
+import clasem.services.MachineService;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
-@Entity
-@SQLDelete(sql = "UPDATE machines SET enabled = false, deleted_at = SYSDATE()  WHERE id = ?", check = ResultCheckStyle.COUNT)
-@Where(clause = "deleted_at IS null")
-@Table(name = "machines")
-public class Machine extends DeletableModel {
+public class MachineModifyWrapper {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
-    @Column(nullable = false)
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String fabricator;
 
-    @Column(nullable = false)
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String mark;
 
-    @Column(nullable = false)
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String model;
 
-    @Column(nullable = false)
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String namemachine;
 
-    @Column(unique = true, nullable = false)
-    @NotNull
+    @NotEmpty
     @Size(min = 3, max = 20)
     private String serie;
 
-    @Column(nullable = false)
     @NotNull
     @DateTimeFormat(pattern="YYYY-MM-DD")
     private Date datepurchase;
 
-    @Column(nullable = false)
-    @NotNull
-    private String machineImage;
+    @ImageConstraint
+    @UploadSizeConstraint(max = 1000000)
+    private MultipartFile image;
 
-    @Column(nullable = false)
-    @NotNull
     private boolean enabled;
 
-    public Machine() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public MachineModifyWrapper() {
     }
 
     public String getFabricator() {
@@ -118,12 +95,12 @@ public class Machine extends DeletableModel {
         this.datepurchase = datepurchase;
     }
 
-    public String getMachineImage() {
-        return machineImage;
+    public MultipartFile getImage() {
+        return image;
     }
 
-    public void setMachineImage(String machineImage) {
-        this.machineImage = machineImage;
+    public void setImage(MultipartFile image) {
+        this.image = image;
     }
 
     public boolean isEnabled() {
@@ -133,20 +110,4 @@ public class Machine extends DeletableModel {
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Machine machine = (Machine) o;
-
-        return serie.equals(machine.serie);
-    }
-
-    @Override
-    public int hashCode() {
-        return id;
-    }
 }
-

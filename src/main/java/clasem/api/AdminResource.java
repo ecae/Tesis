@@ -1,5 +1,6 @@
 package clasem.api;
 
+import clasem.api.exceptions.InvalidFieldMachineModifyException;
 import clasem.api.exceptions.InvalidFieldModifyUserException;
 import clasem.components.constraint.IdConstraint;
 import clasem.controllers.MachineController;
@@ -9,6 +10,7 @@ import clasem.services.UserService;
 import clasem.wrappers.machine.CreateMachineWrapper;
 import clasem.wrappers.machine.EditMachineWrapper;
 import clasem.wrappers.machine.ListMachineWrapper;
+import clasem.wrappers.machine.MachineModifyWrapper;
 import clasem.wrappers.user.CreateUserWrapper;
 import clasem.wrappers.user.EditUserWrapper;
 import clasem.wrappers.user.ListUsersWrapper;
@@ -88,8 +90,20 @@ public class AdminResource {
     }
 
     @RequestMapping(value="/machine/create", method=RequestMethod.POST)
-    public ResponseEntity singleSave(@Valid @ModelAttribute CreateMachineWrapper createMachineWrapper, Errors errors) {
+    public ResponseEntity saveMachine(@Valid @ModelAttribute CreateMachineWrapper createMachineWrapper, Errors errors) {
         return machineController.saveMachine(createMachineWrapper);
+    }
+
+    @RequestMapping(value = "/machine/{id}/edit", method = RequestMethod.POST)
+    public ResponseEntity updateMachine(@Valid @IdConstraint(service = MachineService.class) @PathVariable(value = "id")  String id, @Valid @ModelAttribute MachineModifyWrapper machineModifyWrapper , Errors error) throws InvalidFieldMachineModifyException {
+        int iden = Integer.parseInt(id);
+        return machineController.updateMachine(iden,machineModifyWrapper);
+    }
+
+    @RequestMapping(value = "/machine/{id}/delete", method = RequestMethod.DELETE)
+    public ResponseEntity machineDestroy(@Valid @IdConstraint(service = MachineService.class) @PathVariable(value = "id")  String id ) {
+        int iden = Integer.parseInt(id);
+        return machineController.deleteMachine(iden);
     }
 
 }
