@@ -12,7 +12,7 @@ import java.lang.annotation.*;
 @Target({ ElementType.METHOD, ElementType.FIELD ,ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UniqueConstraint {
-    String message() default "{Ya se encuentra registrado}";
+    String message() default "Ya se encuentra registrado";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
     Class<? extends FieldValueExists> service();

@@ -1,12 +1,19 @@
 package clasem.api;
 
 import clasem.api.exceptions.InvalidFieldMachineModifyException;
+import clasem.api.exceptions.InvalidFieldModifyAssignmentMachineException;
 import clasem.api.exceptions.InvalidFieldModifyUserException;
 import clasem.components.constraint.IdConstraint;
+import clasem.controllers.AssignmentMachineController;
 import clasem.controllers.MachineController;
 import clasem.controllers.UserController;
+import clasem.services.AssignmentMachineService;
 import clasem.services.MachineService;
 import clasem.services.UserService;
+import clasem.wrappers.AssignmentMachine.CreateAssignmentMachineWrapper;
+import clasem.wrappers.AssignmentMachine.EditAssignmentMachineWrapper;
+import clasem.wrappers.AssignmentMachine.ListAssignmentMachineWrapper;
+import clasem.wrappers.AssignmentMachine.UpdateAssignmentMachineWrapper;
 import clasem.wrappers.machine.CreateMachineWrapper;
 import clasem.wrappers.machine.EditMachineWrapper;
 import clasem.wrappers.machine.ListMachineWrapper;
@@ -34,6 +41,7 @@ public class AdminResource {
 
     private UserController userController;
     private MachineController machineController;
+    private AssignmentMachineController assignmentMachineController;
 
     @Autowired
     public void setUserController(UserController userController) {
@@ -43,6 +51,11 @@ public class AdminResource {
     @Autowired
     public void setMachineController(MachineController machineController) {
         this.machineController = machineController;
+    }
+
+    @Autowired
+    public void setAssignmentMachineController(AssignmentMachineController assignmentMachineController) {
+        this.assignmentMachineController = assignmentMachineController;
     }
 
     //********CRUD DE USERS*************
@@ -106,5 +119,31 @@ public class AdminResource {
         return machineController.deleteMachine(iden);
     }
 
+    //*******CRUD DE ASIGNACION DE MAQUINARIA*******
+
+    @RequestMapping(value = "/assignment/list", method = RequestMethod.GET)
+    public List<ListAssignmentMachineWrapper> listAssignmentMachineWrapper() {
+        return assignmentMachineController.listAssignments();
+    }
+
+    @RequestMapping(value = "/assignment/{id}", method = RequestMethod.GET)
+    public EditAssignmentMachineWrapper findById(@Valid @IdConstraint(service = AssignmentMachineService.class) @PathVariable(value = "id")  String id){
+        return assignmentMachineController.findById(id);
+    }
+
+    @RequestMapping(value = "/assignment/create", method = RequestMethod.POST)
+    public ResponseEntity createAssignment(@Valid @RequestBody CreateAssignmentMachineWrapper createAssignmentMachineWrapper, Errors errors ) {
+        return assignmentMachineController.createAssignmentMachine(createAssignmentMachineWrapper);
+    }
+
+    @RequestMapping(value = "/assignment/{id}/update", method = RequestMethod.PUT)
+    public ResponseEntity updateAssignment(@Valid @IdConstraint(service = AssignmentMachineService.class) @PathVariable(value = "id")  String id, @Valid @RequestBody UpdateAssignmentMachineWrapper updateAssignment , Errors errors) throws InvalidFieldModifyAssignmentMachineException {
+        return assignmentMachineController.UpdateAssignment(id,updateAssignment);
+    }
+
+    @RequestMapping(value = "/assignment/{id}/delete",method = RequestMethod.DELETE)
+    public ResponseEntity deleteAssignment(@Valid @IdConstraint(service = AssignmentMachineService.class) @PathVariable(value = "id")  String id) {
+        return assignmentMachineController.deleteAssignment(id);
+    }
 }
 

@@ -45,7 +45,10 @@ public class ApiExceptionHandler {
     }
 
     @ResponseStatus(HttpStatus.CONFLICT)
-    @ExceptionHandler({AlreadyExistUserFieldException.class, InvalidFieldModifyUserException.class, InvalidFieldMachineModifyException.class})
+    @ExceptionHandler({AlreadyExistUserFieldException.class,
+            InvalidFieldModifyUserException.class,
+            InvalidFieldMachineModifyException.class,
+            InvalidFieldModifyAssignmentMachineException.class})
     @ResponseBody
     public ErrorMessage conflictRequest(ApiException exception) {
         ErrorMessage apiErrorMessage = new ErrorMessage(exception);

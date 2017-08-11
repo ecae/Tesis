@@ -13,7 +13,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @RequestMapping
 public @interface IdConstraint {
-    String message() default "No se encuentra el identificador de usuario utilizado o ingrese uno válido";
+    String message() default "No existe el identificador o ingrese uno válido";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
     Class<? extends FieldValueExists> service();
