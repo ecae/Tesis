@@ -3,9 +3,9 @@ package clasem.converter;
 import clasem.entities.core.AssignmentMachine;
 import clasem.entities.core.Machine;
 import clasem.entities.user.User;
+import clasem.wrappers.AssignmentMachine.DetailsOperatorAssignmentWrapper;
 import clasem.wrappers.AssignmentMachine.EditAssignmentMachineWrapper;
 import clasem.wrappers.AssignmentMachine.ListAssignmentMachineWrapper;
-import clasem.wrappers.AssignmentMachine.UpdateAssignmentMachineWrapper;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -33,5 +33,17 @@ public class AssignmentMachineConvert {
         assignmentMachine.setUser(user);
         assignmentMachine.setMachine(machine);
         return assignmentMachine;
+    }
+
+    public DetailsOperatorAssignmentWrapper assignment2detailOperatorAuthenticated(AssignmentMachine assignmentMachine) {
+        DetailsOperatorAssignmentWrapper detailsOperatorAssignmentWrapper = new DetailsOperatorAssignmentWrapper();
+        detailsOperatorAssignmentWrapper.setFabricator(assignmentMachine.getMachine().getFabricator());
+        detailsOperatorAssignmentWrapper.setMark(assignmentMachine.getMachine().getMark());
+        detailsOperatorAssignmentWrapper.setModel(assignmentMachine.getMachine().getModel());
+        detailsOperatorAssignmentWrapper.setNamemachine(assignmentMachine.getMachine().getNamemachine());
+        detailsOperatorAssignmentWrapper.setDatepurchase(assignmentMachine.getMachine().getDatepurchase().toString().split(" ",0)[0]);
+        detailsOperatorAssignmentWrapper.setSerie(assignmentMachine.getMachine().getSerie());
+        detailsOperatorAssignmentWrapper.setMachineImage(assignmentMachine.getMachine().getMachineImage());
+        return detailsOperatorAssignmentWrapper;
     }
 }

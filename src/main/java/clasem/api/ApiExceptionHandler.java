@@ -70,14 +70,14 @@ public class ApiExceptionHandler {
         return errorWrappers;
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+  /*  @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler({ HttpMessageNotReadableException.class})
     @ResponseBody
     public ErrorMessage notFoundReadBody(HttpMessageNotReadableException e) {
 
         ErrorMessage errorMessage = new ErrorMessage(e.getMessage(),"Body");
         return errorMessage;
-    }
+    }*/
 
 
 

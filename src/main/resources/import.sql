@@ -10,5 +10,7 @@ INSERT INTO user_authority (user_id, authority_id) VALUES (1, 2);
 INSERT INTO user_authority (user_id, authority_id) VALUES (2, 1);
 INSERT INTO user_authority (user_id, authority_id) VALUES (3, 1);
 
-INSERT INTO machines (id, fabricator, mark, model, namemachine, serie, datepurchase, machine_image, enabled) VALUES (1, 'CAT', 'CAT', 'CAT784R','CISTERNA','C1254P','2017-05-06 04:40:12' ,'cisterna.jpg', 1);
-INSERT INTO machines (id, fabricator, mark, model, namemachine, serie, datepurchase, machine_image, enabled) VALUES (2, 'CAT', 'CAT', 'D45444R','DUMPER','D1544P','2017-05-06 04:40:12' ,'dumper.jpg', 1)
+INSERT INTO machines (id, fabricator, mark, model, namemachine, serie, datepurchase, machine_image, enabled) VALUES (1, 'CAT', 'CAT', 'CAT784R','CISTERNA','C1254P','2017-05-06' ,'cisterna.jpg', 1);
+INSERT INTO machines (id, fabricator, mark, model, namemachine, serie, datepurchase, machine_image, enabled) VALUES (2, 'CAT', 'CAT', 'D45444R','DUMPER','D1544P','2017-05-06' ,'dumper.jpg', 1);
+
+INSERT INTO assignment_machine (id, description, user_id , machine_id, created_at, updated_at, deleted_at) VALUES  (1, 'MODULO 10',2 , 1, null , null , null);

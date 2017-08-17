@@ -6,6 +6,7 @@ import clasem.api.exceptions.InvalidFieldModifyUserException;
 import clasem.components.constraint.IdConstraint;
 import clasem.controllers.AssignmentMachineController;
 import clasem.controllers.MachineController;
+import clasem.controllers.MaintenanceController;
 import clasem.controllers.UserController;
 import clasem.services.AssignmentMachineService;
 import clasem.services.MachineService;
@@ -18,6 +19,7 @@ import clasem.wrappers.machine.CreateMachineWrapper;
 import clasem.wrappers.machine.EditMachineWrapper;
 import clasem.wrappers.machine.ListMachineWrapper;
 import clasem.wrappers.machine.MachineModifyWrapper;
+import clasem.wrappers.maintenance.CreateMaintenanceWrapper;
 import clasem.wrappers.user.CreateUserWrapper;
 import clasem.wrappers.user.EditUserWrapper;
 import clasem.wrappers.user.ListUsersWrapper;
@@ -42,6 +44,7 @@ public class AdminResource {
     private UserController userController;
     private MachineController machineController;
     private AssignmentMachineController assignmentMachineController;
+    private MaintenanceController maintenanceController;
 
     @Autowired
     public void setUserController(UserController userController) {
@@ -56,6 +59,11 @@ public class AdminResource {
     @Autowired
     public void setAssignmentMachineController(AssignmentMachineController assignmentMachineController) {
         this.assignmentMachineController = assignmentMachineController;
+    }
+
+    @Autowired
+    public void setMaintenanceController(MaintenanceController maintenanceController) {
+        this.maintenanceController = maintenanceController;
     }
 
     //********CRUD DE USERS*************
@@ -144,6 +152,13 @@ public class AdminResource {
     @RequestMapping(value = "/assignment/{id}/delete",method = RequestMethod.DELETE)
     public ResponseEntity deleteAssignment(@Valid @IdConstraint(service = AssignmentMachineService.class) @PathVariable(value = "id")  String id) {
         return assignmentMachineController.deleteAssignment(id);
+    }
+
+    //**********CRUD MANTENIMIENTOS**********
+
+    @RequestMapping(value = "/maintenance/create", method = RequestMethod.POST)
+    public ResponseEntity createMaintenance(@Valid @RequestBody CreateMaintenanceWrapper createMaintenanceWrapper, Errors errors) {
+       return maintenanceController.createMaintenance(createMaintenanceWrapper);
     }
 }
 
