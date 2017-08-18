@@ -10,6 +10,7 @@ import clasem.controllers.MaintenanceController;
 import clasem.controllers.UserController;
 import clasem.services.AssignmentMachineService;
 import clasem.services.MachineService;
+import clasem.services.MaintenanceService;
 import clasem.services.UserService;
 import clasem.wrappers.AssignmentMachine.CreateAssignmentMachineWrapper;
 import clasem.wrappers.AssignmentMachine.EditAssignmentMachineWrapper;
@@ -20,6 +21,8 @@ import clasem.wrappers.machine.EditMachineWrapper;
 import clasem.wrappers.machine.ListMachineWrapper;
 import clasem.wrappers.machine.MachineModifyWrapper;
 import clasem.wrappers.maintenance.CreateMaintenanceWrapper;
+import clasem.wrappers.maintenance.EditMaintenanceWrapper;
+import clasem.wrappers.maintenance.ListMaintenanceWrapper;
 import clasem.wrappers.user.CreateUserWrapper;
 import clasem.wrappers.user.EditUserWrapper;
 import clasem.wrappers.user.ListUsersWrapper;
@@ -159,6 +162,26 @@ public class AdminResource {
     @RequestMapping(value = "/maintenance/create", method = RequestMethod.POST)
     public ResponseEntity createMaintenance(@Valid @RequestBody CreateMaintenanceWrapper createMaintenanceWrapper, Errors errors) {
        return maintenanceController.createMaintenance(createMaintenanceWrapper);
+    }
+
+    @RequestMapping(value = "/maintenance/list", method = RequestMethod.GET)
+    public List<ListMaintenanceWrapper> listMaintenance() {
+        return maintenanceController.listAll();
+    }
+
+    @RequestMapping(value = "/maintenance/{id}", method = RequestMethod.GET)
+    public EditMaintenanceWrapper findMaintenanceId(@Valid @IdConstraint(service = MaintenanceService.class) @PathVariable(value = "id")  String id) {
+        return maintenanceController.findMainteanceById(id);
+    }
+
+    @RequestMapping(value = "/maintenance/{id}/edit", method = RequestMethod.PUT)
+    public ResponseEntity updateMaintenance(@Valid @IdConstraint(service = MaintenanceService.class) @PathVariable(value = "id")  String id, @Valid @RequestBody CreateMaintenanceWrapper createMaintenanceWrapper, Errors errors) {
+        return maintenanceController.updateMaintenance(id,createMaintenanceWrapper);
+    }
+
+    @RequestMapping(value = "/maintenance/{id}/delete", method = RequestMethod.DELETE)
+    public ResponseEntity deleteMaintenance(@Valid @IdConstraint(service = MaintenanceService.class) @PathVariable(value = "id")  String id) {
+        return maintenanceController.deleteMaintenance(id);
     }
 }
 

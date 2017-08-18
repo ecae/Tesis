@@ -26,7 +26,7 @@ public class Maintenance extends DeletableModel {
     private String description;
 
     @Column
-    private Date dateInitial;
+    private Date dateinitial;
 
     @Column
     private int days;
@@ -68,12 +68,12 @@ public class Maintenance extends DeletableModel {
         this.description = description;
     }
 
-    public Date getDateInitial() {
-        return dateInitial;
+    public Date getDateinitial() {
+        return dateinitial;
     }
 
-    public void setDateInitial(Date dateInitial) {
-        this.dateInitial = dateInitial;
+    public void setDateinitial(Date dateinitial) {
+        this.dateinitial = dateinitial;
     }
 
     public int getDays() {

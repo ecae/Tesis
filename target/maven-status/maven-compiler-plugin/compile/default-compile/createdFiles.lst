@@ -13,6 +13,7 @@ clasem\converter\MachineConverter.class
 clasem\entities\DeletableModel.class
 clasem\entities\DatedModel.class
 clasem\config\AspectConfig.class
+clasem\converter\MaintenanceConvert.class
 clasem\services\impl\ErrorService.class
 clasem\components\RequestTimeInterceptor.class
 clasem\wrappers\machine\ListMachineWrapper.class
