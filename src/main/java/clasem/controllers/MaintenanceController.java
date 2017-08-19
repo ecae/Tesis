@@ -2,6 +2,7 @@ package clasem.controllers;
 
 import clasem.entities.core.Maintenance;
 import clasem.repositories.MaintenanceRepository;
+import clasem.services.CalendarService;
 import clasem.services.MaintenanceService;
 import clasem.wrappers.maintenance.CreateMaintenanceWrapper;
 import clasem.wrappers.maintenance.EditMaintenanceWrapper;
@@ -18,6 +19,7 @@ public class MaintenanceController {
 
     private MaintenanceService  maintenanceService;
     private MaintenanceRepository maintenanceRepository;
+    private CalendarService calendarService;
 
     @Autowired
     public void setMaintenanceService(MaintenanceService maintenanceService) {
@@ -27,6 +29,11 @@ public class MaintenanceController {
     @Autowired
     public void setMaintenanceRepository(MaintenanceRepository maintenanceRepository) {
         this.maintenanceRepository = maintenanceRepository;
+    }
+
+    @Autowired
+    public void setCalendarService(CalendarService calendarService) {
+        this.calendarService = calendarService;
     }
 
     public ResponseEntity createMaintenance(CreateMaintenanceWrapper maintenanceWrapper) {
@@ -49,7 +56,9 @@ public class MaintenanceController {
     }
 
     public ResponseEntity deleteMaintenance(String id) {
-        maintenanceRepository.delete(Integer.parseInt(id));
-        return new ResponseEntity("Se ha actualizado el Mantenimiento correctamente", HttpStatus.OK);
+        int nid = Integer.parseInt(id);
+        calendarService.deleteCalendar(nid);
+        maintenanceRepository.delete(nid);
+        return new ResponseEntity("Se ha eliminado el Mantenimiento correctamente", HttpStatus.OK);
     }
 }

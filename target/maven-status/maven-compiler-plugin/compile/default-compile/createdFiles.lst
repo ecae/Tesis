@@ -1,3 +1,4 @@
+clasem\wrappers\Calendar\ListCalendarWrapper.class
 clasem\config\webMvcConfiguration.class
 clasem\converter\UserConverter.class
 clasem\api\exceptions\NotFoundUserIdException.class
@@ -29,13 +30,16 @@ clasem\config\SecurityUtility.class
 clasem\entities\user\AuthorityName.class
 clasem\entities\user\Log.class
 clasem\components\constraint\UniqueConstraint.class
+clasem\services\CalendarService.class
 clasem\api\AuthenticationResource.class
 clasem\services\impl\JwtAuthenticationResponse.class
 clasem\components\constraint\DniConstraint.class
+clasem\services\impl\CalendarServiceImpl.class
 clasem\wrappers\user\ListUsersWrapper.class
 clasem\controllers\UserController.class
 clasem\wrappers\user\CreateUserWrapper.class
 clasem\components\constraint\IdConstraint.class
+clasem\entities\core\Calendar.class
 clasem\services\impl\JwtUserDetailsServiceImpl.class
 clasem\components\constraint\UniqueValidator.class
 clasem\security\JwtAuthenticationEntryPoint.class
@@ -47,6 +51,7 @@ clasem\aspect\ApiLogs.class
 clasem\services\MachineService.class
 clasem\entities\core\Machine.class
 clasem\api\exceptions\ErrorMessage.class
+clasem\repositories\CalendarRepository.class
 clasem\controllers\AuthenticationController.class
 clasem\services\FieldValueExists.class
 clasem\security\JwtTokenUtil.class
@@ -62,12 +67,14 @@ clasem\api\exceptions\InvalidFieldModifyUserException.class
 clasem\components\constraint\RolConstraint.class
 clasem\repositories\MachineRepository.class
 clasem\services\impl\MachineServiceImpl.class
+clasem\converter\CalendarConverter.class
 clasem\components\constraint\DniValidator.class
 clasem\components\constraint\IdValidator.class
 clasem\services\UserService.class
 clasem\api\UserResource.class
 clasem\api\AdminResource.class
 clasem\entities\user\User.class
+clasem\controllers\CalendarController.class
 clasem\wrappers\machine\EditMachineWrapper.class
 clasem\api\exceptions\ErrorLoginException.class
 clasem\repositories\AuthorityRepository.class

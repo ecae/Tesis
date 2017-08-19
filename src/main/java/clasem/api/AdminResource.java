@@ -4,10 +4,7 @@ import clasem.api.exceptions.InvalidFieldMachineModifyException;
 import clasem.api.exceptions.InvalidFieldModifyAssignmentMachineException;
 import clasem.api.exceptions.InvalidFieldModifyUserException;
 import clasem.components.constraint.IdConstraint;
-import clasem.controllers.AssignmentMachineController;
-import clasem.controllers.MachineController;
-import clasem.controllers.MaintenanceController;
-import clasem.controllers.UserController;
+import clasem.controllers.*;
 import clasem.services.AssignmentMachineService;
 import clasem.services.MachineService;
 import clasem.services.MaintenanceService;
@@ -16,6 +13,7 @@ import clasem.wrappers.AssignmentMachine.CreateAssignmentMachineWrapper;
 import clasem.wrappers.AssignmentMachine.EditAssignmentMachineWrapper;
 import clasem.wrappers.AssignmentMachine.ListAssignmentMachineWrapper;
 import clasem.wrappers.AssignmentMachine.UpdateAssignmentMachineWrapper;
+import clasem.wrappers.Calendar.ListCalendarWrapper;
 import clasem.wrappers.machine.CreateMachineWrapper;
 import clasem.wrappers.machine.EditMachineWrapper;
 import clasem.wrappers.machine.ListMachineWrapper;
@@ -48,6 +46,7 @@ public class AdminResource {
     private MachineController machineController;
     private AssignmentMachineController assignmentMachineController;
     private MaintenanceController maintenanceController;
+    private CalendarController calendarController;
 
     @Autowired
     public void setUserController(UserController userController) {
@@ -67,6 +66,11 @@ public class AdminResource {
     @Autowired
     public void setMaintenanceController(MaintenanceController maintenanceController) {
         this.maintenanceController = maintenanceController;
+    }
+
+    @Autowired
+    public void setCalendarController(CalendarController calendarController) {
+        this.calendarController = calendarController;
     }
 
     //********CRUD DE USERS*************
@@ -182,6 +186,12 @@ public class AdminResource {
     @RequestMapping(value = "/maintenance/{id}/delete", method = RequestMethod.DELETE)
     public ResponseEntity deleteMaintenance(@Valid @IdConstraint(service = MaintenanceService.class) @PathVariable(value = "id")  String id) {
         return maintenanceController.deleteMaintenance(id);
+    }
+
+    //******* Calendario de Mantenimientos
+    @RequestMapping(value = "/calendar/maintenances{id?}", method = RequestMethod.GET)
+    public List<ListCalendarWrapper> listCalendar() {
+        return calendarController.listCalendar();
     }
 }
 

@@ -5,6 +5,7 @@ import clasem.entities.core.Machine;
 import clasem.entities.core.Maintenance;
 import clasem.repositories.MachineRepository;
 import clasem.repositories.MaintenanceRepository;
+import clasem.services.CalendarService;
 import clasem.services.MaintenanceService;
 import clasem.wrappers.maintenance.CreateMaintenanceWrapper;
 import clasem.wrappers.maintenance.EditMaintenanceWrapper;
@@ -20,6 +21,7 @@ public class MaintenanceServiceImpl implements MaintenanceService {
 
     private MachineRepository machineRepository;
     private MaintenanceRepository maintenanceRepository;
+    private CalendarService calendarService;
 
     @Autowired
     private MaintenanceConvert maintenanceConvert;
@@ -33,10 +35,16 @@ public class MaintenanceServiceImpl implements MaintenanceService {
         this.maintenanceRepository = maintenanceRepository;
     }
 
+    @Autowired
+    public void setCalendarService(CalendarService calendarService) {
+        this.calendarService = calendarService;
+    }
+
     @Override
     public void createMaintenance(CreateMaintenanceWrapper createMaintenanceWrapper) {
         Machine machine = machineRepository.findById(Integer.parseInt(createMaintenanceWrapper.getId_machine()));
-        maintenanceRepository.save(maintenanceConvert.createMaintenanceWrapper2Maintenance(createMaintenanceWrapper,machine));
+        Maintenance maintenance = maintenanceRepository.save(maintenanceConvert.createMaintenanceWrapper2Maintenance(createMaintenanceWrapper,machine));
+        calendarService.addCalendar(maintenance);
     }
 
     @Override
@@ -57,7 +65,8 @@ public class MaintenanceServiceImpl implements MaintenanceService {
     @Override
     public void updateMaintenance(CreateMaintenanceWrapper createMaintenanceWrapper, Maintenance maintenance) {
         Machine machine = machineRepository.findById(Integer.parseInt(createMaintenanceWrapper.getId_machine()));
-        maintenanceRepository.save(maintenanceConvert.updateMaintenance2Maintenance(createMaintenanceWrapper,machine,maintenance));
+        Maintenance maintenance1 = maintenanceRepository.save(maintenanceConvert.updateMaintenance2Maintenance(createMaintenanceWrapper,machine,maintenance));
+        calendarService.updateCalendar(maintenance1);
     }
 
     @Override

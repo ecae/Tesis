@@ -3,6 +3,7 @@ package clasem.api;
 import clasem.controllers.OperatorController;
 import clasem.controllers.UserController;
 import clasem.wrappers.AssignmentMachine.DetailsOperatorAssignmentWrapper;
+import clasem.wrappers.Calendar.ListCalendarWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.annotation.Validated;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @RestController
 @Validated
@@ -27,6 +29,11 @@ public class OperatorResource {
     @RequestMapping(value = "/assignment/machine", method = RequestMethod.GET)
     public DetailsOperatorAssignmentWrapper HelloOperator(HttpServletRequest request) {
         return operatorController.detail2Operator(request);
+    }
+
+    @RequestMapping(value = "/calendar/maintenances{id?}", method = RequestMethod.GET)
+    public List<ListCalendarWrapper> listCalendar() {
+        return calendarController.listCalendar();
     }
 
 }
