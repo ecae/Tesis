@@ -1,10 +1,16 @@
 package clasem.services.impl;
 
+import clasem.converter.AssignmentMachineConvert;
 import clasem.converter.CalendarConverter;
+import clasem.entities.core.AssignmentMachine;
 import clasem.entities.core.Calendar;
+import clasem.entities.core.Machine;
 import clasem.entities.core.Maintenance;
+import clasem.entities.user.User;
+import clasem.repositories.AssignmentMachineRepository;
 import clasem.repositories.CalendarRepository;
 import clasem.repositories.MaintenanceRepository;
+import clasem.repositories.UserRepository;
 import clasem.services.CalendarService;
 import clasem.wrappers.Calendar.ListCalendarWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +22,36 @@ import java.util.List;
 @Service
 public class CalendarServiceImpl implements CalendarService {
 
-    @Autowired
     private CalendarConverter calendarConverter;
-
-    @Autowired
     private CalendarRepository calendarRepository;
+    private MaintenanceRepository maintenanceRepository;
+    private UserRepository userRepository;
+    private AssignmentMachineRepository assignmentMachineRepository;
 
     @Autowired
-    private MaintenanceRepository maintenanceRepository;
+    public void setCalendarConverter(CalendarConverter calendarConverter) {
+        this.calendarConverter = calendarConverter;
+    }
+
+    @Autowired
+    public void setCalendarRepository(CalendarRepository calendarRepository) {
+        this.calendarRepository = calendarRepository;
+    }
+
+    @Autowired
+    public void setMaintenanceRepository(MaintenanceRepository maintenanceRepository) {
+        this.maintenanceRepository = maintenanceRepository;
+    }
+
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Autowired
+    private void setAssignmentMachineRepository (AssignmentMachineRepository assignmentMachineRepository){
+        this.assignmentMachineRepository = assignmentMachineRepository;
+    }
 
     @Override
     public List<ListCalendarWrapper> listAllCalendar() {
@@ -36,8 +64,19 @@ public class CalendarServiceImpl implements CalendarService {
     }
 
     @Override
-    public List<ListCalendarWrapper> listAllCalendarOperator() {
-        return null;
+    public List<ListCalendarWrapper> listAllCalendarOperator(long id_user) {
+        User user = userRepository.findById(id_user);
+        AssignmentMachine assignmentMachine = assignmentMachineRepository.findByUser(user);
+        List<ListCalendarWrapper> listCalendarWrappers = new ArrayList<ListCalendarWrapper>();
+        if(assignmentMachine != null){
+            Machine machine = assignmentMachine.getMachine();
+            List<Calendar> calendars = calendarRepository.findAllByDescription(machine.getNamemachine());
+            for (Calendar calendar: calendars) {
+                listCalendarWrappers.add(calendarConverter.calendar2ListCalendarWrapper(calendar));
+            }
+            return listCalendarWrappers;
+        }
+        return listCalendarWrappers;
     }
 
     @Override

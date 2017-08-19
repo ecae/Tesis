@@ -32,8 +32,8 @@ public class OperatorResource {
     }
 
     @RequestMapping(value = "/calendar/maintenances{id?}", method = RequestMethod.GET)
-    public List<ListCalendarWrapper> listCalendar() {
-        return calendarController.listCalendar();
+    public List<ListCalendarWrapper> listCalendar(HttpServletRequest request) {
+        return operatorController.listCalendar(request);
     }
 
 }

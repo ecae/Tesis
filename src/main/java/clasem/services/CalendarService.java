@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CalendarService {
     List<ListCalendarWrapper> listAllCalendar();
-    List<ListCalendarWrapper> listAllCalendarOperator();
+    List<ListCalendarWrapper> listAllCalendarOperator(long id_user);
     void addCalendar(Maintenance maintenance);
     void updateCalendar(Maintenance maintenance);
     void deleteCalendar(int id_maintenance);
